@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(sfml_lab)
+project(game)
 
 # Använd C++ 17.
 set(CMALE_CXX_STANDARD 17)
@@ -15,7 +15,15 @@ endforeach(i)
 
 # Ange källfiler, lägg till de filer som ni behöver!
 set(SOURCE_FILES
-  main.cc)
+  main.cc
+  game_engine.h
+  game_engine.cc
+  world.h
+  world.cc
+  object.h
+  object.cc
+  turret.h
+  turret.cc)
 
-add_executable(sfml_lab ${SOURCE_FILES})
-target_link_libraries(sfml_lab ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
+add_executable(game ${SOURCE_FILES})
+target_link_libraries(game ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
