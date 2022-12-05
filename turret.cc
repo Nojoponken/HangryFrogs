@@ -1,7 +1,7 @@
 #include "turret.h"
 
-Turret::Turret(sf::Texture &texture, sf::Vector2f coordinates)
-    : Object(texture, coordinates)
+Turret::Turret(sf::Texture &texture, sf::Vector2f coordinates, float radius)
+    : Entity(texture, coordinates, radius)
 {
 }
 

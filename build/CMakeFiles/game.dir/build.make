@@ -97,10 +97,24 @@ CMakeFiles/game.dir/game_engine.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/game_engine.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linlo001/TDP005/hangry_frogs/game_engine.cc -o CMakeFiles/game.dir/game_engine.cc.s
 
+CMakeFiles/game.dir/entity.cc.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/entity.cc.o: ../entity.cc
+CMakeFiles/game.dir/entity.cc.o: CMakeFiles/game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/entity.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/entity.cc.o -MF CMakeFiles/game.dir/entity.cc.o.d -o CMakeFiles/game.dir/entity.cc.o -c /home/linlo001/TDP005/hangry_frogs/entity.cc
+
+CMakeFiles/game.dir/entity.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/entity.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linlo001/TDP005/hangry_frogs/entity.cc > CMakeFiles/game.dir/entity.cc.i
+
+CMakeFiles/game.dir/entity.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/entity.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linlo001/TDP005/hangry_frogs/entity.cc -o CMakeFiles/game.dir/entity.cc.s
+
 CMakeFiles/game.dir/world.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/world.cc.o: ../world.cc
 CMakeFiles/game.dir/world.cc.o: CMakeFiles/game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/world.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/world.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/world.cc.o -MF CMakeFiles/game.dir/world.cc.o.d -o CMakeFiles/game.dir/world.cc.o -c /home/linlo001/TDP005/hangry_frogs/world.cc
 
 CMakeFiles/game.dir/world.cc.i: cmake_force
@@ -110,20 +124,6 @@ CMakeFiles/game.dir/world.cc.i: cmake_force
 CMakeFiles/game.dir/world.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/world.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linlo001/TDP005/hangry_frogs/world.cc -o CMakeFiles/game.dir/world.cc.s
-
-CMakeFiles/game.dir/object.cc.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/object.cc.o: ../object.cc
-CMakeFiles/game.dir/object.cc.o: CMakeFiles/game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/object.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/object.cc.o -MF CMakeFiles/game.dir/object.cc.o.d -o CMakeFiles/game.dir/object.cc.o -c /home/linlo001/TDP005/hangry_frogs/object.cc
-
-CMakeFiles/game.dir/object.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/object.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linlo001/TDP005/hangry_frogs/object.cc > CMakeFiles/game.dir/object.cc.i
-
-CMakeFiles/game.dir/object.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/object.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linlo001/TDP005/hangry_frogs/object.cc -o CMakeFiles/game.dir/object.cc.s
 
 CMakeFiles/game.dir/turret.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/turret.cc.o: ../turret.cc
@@ -139,25 +139,57 @@ CMakeFiles/game.dir/turret.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/turret.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linlo001/TDP005/hangry_frogs/turret.cc -o CMakeFiles/game.dir/turret.cc.s
 
+CMakeFiles/game.dir/enemy.cc.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/enemy.cc.o: ../enemy.cc
+CMakeFiles/game.dir/enemy.cc.o: CMakeFiles/game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/enemy.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/enemy.cc.o -MF CMakeFiles/game.dir/enemy.cc.o.d -o CMakeFiles/game.dir/enemy.cc.o -c /home/linlo001/TDP005/hangry_frogs/enemy.cc
+
+CMakeFiles/game.dir/enemy.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/enemy.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linlo001/TDP005/hangry_frogs/enemy.cc > CMakeFiles/game.dir/enemy.cc.i
+
+CMakeFiles/game.dir/enemy.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/enemy.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linlo001/TDP005/hangry_frogs/enemy.cc -o CMakeFiles/game.dir/enemy.cc.s
+
+CMakeFiles/game.dir/pepe.cc.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/pepe.cc.o: ../pepe.cc
+CMakeFiles/game.dir/pepe.cc.o: CMakeFiles/game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/pepe.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/pepe.cc.o -MF CMakeFiles/game.dir/pepe.cc.o.d -o CMakeFiles/game.dir/pepe.cc.o -c /home/linlo001/TDP005/hangry_frogs/pepe.cc
+
+CMakeFiles/game.dir/pepe.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/pepe.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/linlo001/TDP005/hangry_frogs/pepe.cc > CMakeFiles/game.dir/pepe.cc.i
+
+CMakeFiles/game.dir/pepe.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/pepe.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/linlo001/TDP005/hangry_frogs/pepe.cc -o CMakeFiles/game.dir/pepe.cc.s
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/main.cc.o" \
 "CMakeFiles/game.dir/game_engine.cc.o" \
+"CMakeFiles/game.dir/entity.cc.o" \
 "CMakeFiles/game.dir/world.cc.o" \
-"CMakeFiles/game.dir/object.cc.o" \
-"CMakeFiles/game.dir/turret.cc.o"
+"CMakeFiles/game.dir/turret.cc.o" \
+"CMakeFiles/game.dir/enemy.cc.o" \
+"CMakeFiles/game.dir/pepe.cc.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
 game: CMakeFiles/game.dir/main.cc.o
 game: CMakeFiles/game.dir/game_engine.cc.o
+game: CMakeFiles/game.dir/entity.cc.o
 game: CMakeFiles/game.dir/world.cc.o
-game: CMakeFiles/game.dir/object.cc.o
 game: CMakeFiles/game.dir/turret.cc.o
+game: CMakeFiles/game.dir/enemy.cc.o
+game: CMakeFiles/game.dir/pepe.cc.o
 game: CMakeFiles/game.dir/build.make
 game: CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/linlo001/TDP005/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

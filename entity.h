@@ -1,20 +1,20 @@
 
-#ifndef OBJECT_H
-#define OBJECT_H
+#ifndef ENTITY_H
+#define ENTITY_H
 
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <cmath>
 #include <iostream>
 
-class Object
+class Entity
 {
 private:
     float radius;
     sf::Sprite sprite;
 
 public:
-    Object(sf::Texture &texture, sf::Vector2f coordinates);
+    Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius);
     virtual void update(sf::Time delta) = 0;
     void draw(sf::RenderWindow &window);
 

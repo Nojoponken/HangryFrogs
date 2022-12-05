@@ -18,12 +18,17 @@ set(SOURCE_FILES
   main.cc
   game_engine.h
   game_engine.cc
+  entity.h
+  entity.cc
   world.h
   world.cc
-  object.h
-  object.cc
   turret.h
-  turret.cc)
+  turret.cc
+  enemy.h
+  enemy.cc
+  pepe.h
+  pepe.cc
+  )
 
 add_executable(game ${SOURCE_FILES})
 target_link_libraries(game ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})

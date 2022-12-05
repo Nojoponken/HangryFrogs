@@ -129,6 +129,54 @@ game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+enemy.o: enemy.cc.o
+.PHONY : enemy.o
+
+# target to build an object file
+enemy.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/enemy.cc.o
+.PHONY : enemy.cc.o
+
+enemy.i: enemy.cc.i
+.PHONY : enemy.i
+
+# target to preprocess a source file
+enemy.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/enemy.cc.i
+.PHONY : enemy.cc.i
+
+enemy.s: enemy.cc.s
+.PHONY : enemy.s
+
+# target to generate assembly for a file
+enemy.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/enemy.cc.s
+.PHONY : enemy.cc.s
+
+entity.o: entity.cc.o
+.PHONY : entity.o
+
+# target to build an object file
+entity.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/entity.cc.o
+.PHONY : entity.cc.o
+
+entity.i: entity.cc.i
+.PHONY : entity.i
+
+# target to preprocess a source file
+entity.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/entity.cc.i
+.PHONY : entity.cc.i
+
+entity.s: entity.cc.s
+.PHONY : entity.s
+
+# target to generate assembly for a file
+entity.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/entity.cc.s
+.PHONY : entity.cc.s
+
 game_engine.o: game_engine.cc.o
 .PHONY : game_engine.o
 
@@ -177,29 +225,29 @@ main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.s
 .PHONY : main.cc.s
 
-object.o: object.cc.o
-.PHONY : object.o
+pepe.o: pepe.cc.o
+.PHONY : pepe.o
 
 # target to build an object file
-object.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/object.cc.o
-.PHONY : object.cc.o
+pepe.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/pepe.cc.o
+.PHONY : pepe.cc.o
 
-object.i: object.cc.i
-.PHONY : object.i
+pepe.i: pepe.cc.i
+.PHONY : pepe.i
 
 # target to preprocess a source file
-object.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/object.cc.i
-.PHONY : object.cc.i
+pepe.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/pepe.cc.i
+.PHONY : pepe.cc.i
 
-object.s: object.cc.s
-.PHONY : object.s
+pepe.s: pepe.cc.s
+.PHONY : pepe.s
 
 # target to generate assembly for a file
-object.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/object.cc.s
-.PHONY : object.cc.s
+pepe.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/pepe.cc.s
+.PHONY : pepe.cc.s
 
 turret.o: turret.cc.o
 .PHONY : turret.o
@@ -258,15 +306,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... enemy.o"
+	@echo "... enemy.i"
+	@echo "... enemy.s"
+	@echo "... entity.o"
+	@echo "... entity.i"
+	@echo "... entity.s"
 	@echo "... game_engine.o"
 	@echo "... game_engine.i"
 	@echo "... game_engine.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... object.o"
-	@echo "... object.i"
-	@echo "... object.s"
+	@echo "... pepe.o"
+	@echo "... pepe.i"
+	@echo "... pepe.s"
 	@echo "... turret.o"
 	@echo "... turret.i"
 	@echo "... turret.s"

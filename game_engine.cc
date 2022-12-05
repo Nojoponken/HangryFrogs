@@ -21,11 +21,13 @@ void Game_Engine::run()
         turret.setTextureRect(rectTurret);
         turret.setPosition(50, 50); */
     World world{};
-    world.spawn_turret({50, 50});
-
+    world.spawn_turret({777, 200});
+    world.spawn_turret({630, 470});
+    world.spawn_turret({477, 177});
+    world.spawn_enemy();
     sf::Clock clock;
 
-    sf::RenderWindow window{sf::VideoMode(1024, 768), "Hangry Frogs!"};
+    sf::RenderWindow window{sf::VideoMode(1024, 758), "Hangry Frogs!"};
     while (window.isOpen())
     {
 
