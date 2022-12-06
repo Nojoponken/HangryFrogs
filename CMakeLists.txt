@@ -28,7 +28,13 @@ set(SOURCE_FILES
   enemy.cc
   pepe.h
   pepe.cc
+  actionbar.h
+  actionbar.cc
+  button.h
+  button.cc
   )
+
+add_compile_options("-g")
 
 add_executable(game ${SOURCE_FILES})
 target_link_libraries(game ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})

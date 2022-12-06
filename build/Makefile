@@ -129,6 +129,54 @@ game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+actionbar.o: actionbar.cc.o
+.PHONY : actionbar.o
+
+# target to build an object file
+actionbar.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/actionbar.cc.o
+.PHONY : actionbar.cc.o
+
+actionbar.i: actionbar.cc.i
+.PHONY : actionbar.i
+
+# target to preprocess a source file
+actionbar.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/actionbar.cc.i
+.PHONY : actionbar.cc.i
+
+actionbar.s: actionbar.cc.s
+.PHONY : actionbar.s
+
+# target to generate assembly for a file
+actionbar.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/actionbar.cc.s
+.PHONY : actionbar.cc.s
+
+button.o: button.cc.o
+.PHONY : button.o
+
+# target to build an object file
+button.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/button.cc.o
+.PHONY : button.cc.o
+
+button.i: button.cc.i
+.PHONY : button.i
+
+# target to preprocess a source file
+button.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/button.cc.i
+.PHONY : button.cc.i
+
+button.s: button.cc.s
+.PHONY : button.s
+
+# target to generate assembly for a file
+button.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/button.cc.s
+.PHONY : button.cc.s
+
 enemy.o: enemy.cc.o
 .PHONY : enemy.o
 
@@ -306,6 +354,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... actionbar.o"
+	@echo "... actionbar.i"
+	@echo "... actionbar.s"
+	@echo "... button.o"
+	@echo "... button.i"
+	@echo "... button.s"
 	@echo "... enemy.o"
 	@echo "... enemy.i"
 	@echo "... enemy.s"

@@ -23,3 +23,8 @@ void Turret::update(sf::Time delta)
 
     direction = new_direction;
 }
+
+void Turret::set_position(sf::Vector2f coord)
+{
+    coordinates = coord;
+}

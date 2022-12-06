@@ -14,6 +14,16 @@ void Game_Engine::run()
     backg.loadFromFile("../bg.png");
     sf::Sprite background{backg};
 
+    /*    sf::Texture btn1{};
+       sf::Texture btn2{};
+       sf::Texture actbar{};
+       btn1.loadFromFile("../pepe.png");
+       btn2.loadFromFile("../frost.png");
+       actbar.loadFromFile("../bar.png");
+       Actionbar actionbar{actbar, {0, 758}};
+       actionbar.add_button(btn1, );
+       actionbar.add_button(btn2); */
+
     /*     sf::Texture turr{};
         turr.loadFromFile("../pepeheadsprite.png");
         sf::Sprite turret{turr};
@@ -26,8 +36,9 @@ void Game_Engine::run()
     world.spawn_turret({477, 177});
     world.spawn_enemy();
     sf::Clock clock;
+    bool place_turret{false};
+    sf::RenderWindow window{sf::VideoMode(1024, 858), "Hangry Frogs!"};
 
-    sf::RenderWindow window{sf::VideoMode(1024, 758), "Hangry Frogs!"};
     while (window.isOpen())
     {
 
@@ -35,7 +46,17 @@ void Game_Engine::run()
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
+            {
                 window.close();
+            }
+
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                if (!world.get_actionbar().on_bar(window, world.get_turrets_to_place()))
+                {
+                    world.place_turret(window);
+                }
+            }
         }
 
         update(clock, world);
@@ -44,7 +65,7 @@ void Game_Engine::run()
         window.draw(background);
 
         world.draw_objects(window);
-
+        world.draw_bar(window);
         window.display();
     }
 }

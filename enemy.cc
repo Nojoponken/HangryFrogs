@@ -16,6 +16,7 @@ void Enemy::update(sf::Time delta)
     {
         checkpoint++;
     }
+
     coordinates.x += (dx / distance) * delta.asSeconds() * 50;
     coordinates.y += (dy / distance) * delta.asSeconds() * 50;
 

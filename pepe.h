@@ -6,7 +6,7 @@
 class Pepe : public Turret
 {
 public:
-    Pepe(sf::Texture &texture, sf::Vector2f position, float radius);
+    Pepe(sf::Texture &texture, sf::Vector2f position);
 
     void update(sf::Time delta) override;
 };
