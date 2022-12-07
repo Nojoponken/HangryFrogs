@@ -1,13 +1,11 @@
-CMakeFiles/game.dir/enemy.cc.o: \
- /home/linlo001/TDP005/hangry_frogs/enemy.cc /usr/include/stdc-predef.h \
- /home/linlo001/TDP005/hangry_frogs/enemy.h \
- /home/linlo001/TDP005/hangry_frogs/entity.h \
- /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
- /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
- /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
- /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Err.hpp \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/iosfwd \
+CMakeFiles/game.dir/enemy.cc.o: /home/noali443/hangry_frogs/enemy.cc \
+ /usr/include/stdc-predef.h /home/noali443/hangry_frogs/enemy.h \
+ /home/noali443/hangry_frogs/entity.h /usr/include/SFML/Graphics.hpp \
+ /usr/include/SFML/Window.hpp /usr/include/SFML/System.hpp \
+ /usr/include/SFML/Config.hpp /usr/include/SFML/System/Clock.hpp \
+ /usr/include/SFML/System/Export.hpp /usr/include/SFML/System/Time.hpp \
+ /usr/include/SFML/System/Err.hpp /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

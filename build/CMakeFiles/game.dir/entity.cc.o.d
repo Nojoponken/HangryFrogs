@@ -1,6 +1,5 @@
-CMakeFiles/game.dir/entity.cc.o: \
- /home/linlo001/TDP005/hangry_frogs/entity.cc /usr/include/stdc-predef.h \
- /home/linlo001/TDP005/hangry_frogs/entity.h \
+CMakeFiles/game.dir/entity.cc.o: /home/noali443/hangry_frogs/entity.cc \
+ /usr/include/stdc-predef.h /home/noali443/hangry_frogs/entity.h \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
  /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \

@@ -1,4 +1,4 @@
-# Install script for directory: /home/linlo001/TDP005/hangry_frogs
+# Install script for directory: /home/noali443/hangry_frogs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/linlo001/TDP005/hangry_frogs/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/noali443/hangry_frogs/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
