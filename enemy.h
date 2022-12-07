@@ -12,6 +12,7 @@ private:
 
 public:
     Enemy(sf::Texture &texture, sf::Vector2f coordinates, float radius, int health, std::vector<sf::Vector2f> const &path);
+    virtual ~Enemy() = default;
     virtual void update(sf::Time delta) override;
 };
 

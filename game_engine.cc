@@ -54,6 +54,7 @@ void Game_Engine::run()
             {
                 if (!world.get_actionbar().on_bar(window, world.get_turrets_to_place()))
                 {
+
                     world.place_turret(window);
                 }
             }

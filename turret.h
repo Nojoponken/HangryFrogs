@@ -12,6 +12,7 @@ private:
 
 public:
     Turret(sf::Texture &texture, sf::Vector2f coordinates, float radius);
+    virtual ~Turret() = default;
     virtual void update(sf::Time delta) override;
     void set_position(sf::Vector2f coord);
 };

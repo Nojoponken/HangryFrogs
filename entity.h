@@ -17,6 +17,7 @@ public:
     Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius);
     virtual void update(sf::Time delta) = 0;
     void draw(sf::RenderWindow &window);
+    virtual ~Entity() = default;
 
 protected:
     sf::Vector2f direction;

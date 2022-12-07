@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "turret.h"
 
+template <typename T>
 class Button
 {
 private:
@@ -11,6 +12,7 @@ private:
 
 public:
     Button(sf::Texture &texture, Turret *turret);
+    ~Button();
     void draw_button(sf::RenderWindow &window);
     void set_position(sf::Vector2f coordinates);
     sf::Sprite &get_sprite();
