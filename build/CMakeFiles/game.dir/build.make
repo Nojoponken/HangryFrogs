@@ -73,127 +73,127 @@ CMakeFiles/game.dir/main.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/main.cc.o: ../main.cc
 CMakeFiles/game.dir/main.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game.dir/main.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/main.cc.o -MF CMakeFiles/game.dir/main.cc.o.d -o CMakeFiles/game.dir/main.cc.o -c /home/noali443/hangry_frogs/main.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/main.cc.o -MF CMakeFiles/game.dir/main.cc.o.d -o CMakeFiles/game.dir/main.cc.o -c /home/noali443/hangry_frogs/main.cc
 
 CMakeFiles/game.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/main.cc > CMakeFiles/game.dir/main.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/main.cc > CMakeFiles/game.dir/main.cc.i
 
 CMakeFiles/game.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/main.cc -o CMakeFiles/game.dir/main.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/main.cc -o CMakeFiles/game.dir/main.cc.s
 
 CMakeFiles/game.dir/game_engine.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/game_engine.cc.o: ../game_engine.cc
 CMakeFiles/game.dir/game_engine.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game.dir/game_engine.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/game_engine.cc.o -MF CMakeFiles/game.dir/game_engine.cc.o.d -o CMakeFiles/game.dir/game_engine.cc.o -c /home/noali443/hangry_frogs/game_engine.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/game_engine.cc.o -MF CMakeFiles/game.dir/game_engine.cc.o.d -o CMakeFiles/game.dir/game_engine.cc.o -c /home/noali443/hangry_frogs/game_engine.cc
 
 CMakeFiles/game.dir/game_engine.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/game_engine.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/game_engine.cc > CMakeFiles/game.dir/game_engine.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/game_engine.cc > CMakeFiles/game.dir/game_engine.cc.i
 
 CMakeFiles/game.dir/game_engine.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/game_engine.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/game_engine.cc -o CMakeFiles/game.dir/game_engine.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/game_engine.cc -o CMakeFiles/game.dir/game_engine.cc.s
 
 CMakeFiles/game.dir/entity.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/entity.cc.o: ../entity.cc
 CMakeFiles/game.dir/entity.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/entity.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/entity.cc.o -MF CMakeFiles/game.dir/entity.cc.o.d -o CMakeFiles/game.dir/entity.cc.o -c /home/noali443/hangry_frogs/entity.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/entity.cc.o -MF CMakeFiles/game.dir/entity.cc.o.d -o CMakeFiles/game.dir/entity.cc.o -c /home/noali443/hangry_frogs/entity.cc
 
 CMakeFiles/game.dir/entity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/entity.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/entity.cc > CMakeFiles/game.dir/entity.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/entity.cc > CMakeFiles/game.dir/entity.cc.i
 
 CMakeFiles/game.dir/entity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/entity.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/entity.cc -o CMakeFiles/game.dir/entity.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/entity.cc -o CMakeFiles/game.dir/entity.cc.s
 
 CMakeFiles/game.dir/world.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/world.cc.o: ../world.cc
 CMakeFiles/game.dir/world.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/world.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/world.cc.o -MF CMakeFiles/game.dir/world.cc.o.d -o CMakeFiles/game.dir/world.cc.o -c /home/noali443/hangry_frogs/world.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/world.cc.o -MF CMakeFiles/game.dir/world.cc.o.d -o CMakeFiles/game.dir/world.cc.o -c /home/noali443/hangry_frogs/world.cc
 
 CMakeFiles/game.dir/world.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/world.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/world.cc > CMakeFiles/game.dir/world.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/world.cc > CMakeFiles/game.dir/world.cc.i
 
 CMakeFiles/game.dir/world.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/world.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/world.cc -o CMakeFiles/game.dir/world.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/world.cc -o CMakeFiles/game.dir/world.cc.s
 
 CMakeFiles/game.dir/turret.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/turret.cc.o: ../turret.cc
 CMakeFiles/game.dir/turret.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/turret.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/turret.cc.o -MF CMakeFiles/game.dir/turret.cc.o.d -o CMakeFiles/game.dir/turret.cc.o -c /home/noali443/hangry_frogs/turret.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/turret.cc.o -MF CMakeFiles/game.dir/turret.cc.o.d -o CMakeFiles/game.dir/turret.cc.o -c /home/noali443/hangry_frogs/turret.cc
 
 CMakeFiles/game.dir/turret.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/turret.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/turret.cc > CMakeFiles/game.dir/turret.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/turret.cc > CMakeFiles/game.dir/turret.cc.i
 
 CMakeFiles/game.dir/turret.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/turret.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/turret.cc -o CMakeFiles/game.dir/turret.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/turret.cc -o CMakeFiles/game.dir/turret.cc.s
 
 CMakeFiles/game.dir/enemy.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/enemy.cc.o: ../enemy.cc
 CMakeFiles/game.dir/enemy.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/enemy.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/enemy.cc.o -MF CMakeFiles/game.dir/enemy.cc.o.d -o CMakeFiles/game.dir/enemy.cc.o -c /home/noali443/hangry_frogs/enemy.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/enemy.cc.o -MF CMakeFiles/game.dir/enemy.cc.o.d -o CMakeFiles/game.dir/enemy.cc.o -c /home/noali443/hangry_frogs/enemy.cc
 
 CMakeFiles/game.dir/enemy.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/enemy.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/enemy.cc > CMakeFiles/game.dir/enemy.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/enemy.cc > CMakeFiles/game.dir/enemy.cc.i
 
 CMakeFiles/game.dir/enemy.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/enemy.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/enemy.cc -o CMakeFiles/game.dir/enemy.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/enemy.cc -o CMakeFiles/game.dir/enemy.cc.s
 
 CMakeFiles/game.dir/pepe.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/pepe.cc.o: ../pepe.cc
 CMakeFiles/game.dir/pepe.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/pepe.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/pepe.cc.o -MF CMakeFiles/game.dir/pepe.cc.o.d -o CMakeFiles/game.dir/pepe.cc.o -c /home/noali443/hangry_frogs/pepe.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/pepe.cc.o -MF CMakeFiles/game.dir/pepe.cc.o.d -o CMakeFiles/game.dir/pepe.cc.o -c /home/noali443/hangry_frogs/pepe.cc
 
 CMakeFiles/game.dir/pepe.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/pepe.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/pepe.cc > CMakeFiles/game.dir/pepe.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/pepe.cc > CMakeFiles/game.dir/pepe.cc.i
 
 CMakeFiles/game.dir/pepe.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/pepe.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/pepe.cc -o CMakeFiles/game.dir/pepe.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/pepe.cc -o CMakeFiles/game.dir/pepe.cc.s
 
 CMakeFiles/game.dir/actionbar.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/actionbar.cc.o: ../actionbar.cc
 CMakeFiles/game.dir/actionbar.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game.dir/actionbar.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/actionbar.cc.o -MF CMakeFiles/game.dir/actionbar.cc.o.d -o CMakeFiles/game.dir/actionbar.cc.o -c /home/noali443/hangry_frogs/actionbar.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/actionbar.cc.o -MF CMakeFiles/game.dir/actionbar.cc.o.d -o CMakeFiles/game.dir/actionbar.cc.o -c /home/noali443/hangry_frogs/actionbar.cc
 
 CMakeFiles/game.dir/actionbar.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/actionbar.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/actionbar.cc > CMakeFiles/game.dir/actionbar.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/actionbar.cc > CMakeFiles/game.dir/actionbar.cc.i
 
 CMakeFiles/game.dir/actionbar.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/actionbar.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/actionbar.cc -o CMakeFiles/game.dir/actionbar.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/actionbar.cc -o CMakeFiles/game.dir/actionbar.cc.s
 
 CMakeFiles/game.dir/button.cc.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/button.cc.o: ../button.cc
 CMakeFiles/game.dir/button.cc.o: CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noali443/hangry_frogs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/game.dir/button.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/button.cc.o -MF CMakeFiles/game.dir/button.cc.o.d -o CMakeFiles/game.dir/button.cc.o -c /home/noali443/hangry_frogs/button.cc
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game.dir/button.cc.o -MF CMakeFiles/game.dir/button.cc.o.d -o CMakeFiles/game.dir/button.cc.o -c /home/noali443/hangry_frogs/button.cc
 
 CMakeFiles/game.dir/button.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/button.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/button.cc > CMakeFiles/game.dir/button.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/noali443/hangry_frogs/button.cc > CMakeFiles/game.dir/button.cc.i
 
 CMakeFiles/game.dir/button.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/button.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/button.cc -o CMakeFiles/game.dir/button.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/noali443/hangry_frogs/button.cc -o CMakeFiles/game.dir/button.cc.s
 
 # Object files for target game
 game_OBJECTS = \

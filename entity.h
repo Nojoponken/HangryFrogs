@@ -10,7 +10,7 @@
 class Entity
 {
 private:
-    float radius;
+    float radius; ///
     sf::Sprite sprite;
 
 public:

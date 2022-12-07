@@ -1,0 +1,167 @@
+\hypertarget{classWorld}{}\doxysection{World Class Reference}
+\label{classWorld}\index{World@{World}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWorld_a56a188dc66cbce4e93615789df013997}{update\+\_\+objects}} (sf\+::\+Time delta)
+\begin{DoxyCompactList}\small\item\em Function to update all entities inside the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWorld_a332c86b51fdf971b2e4f3408377fd3b5}{draw\+\_\+objects}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function to display all the entitites stored in a specific data container. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWorld_a3a2cf04c8163bf1ffe4c593dfbf738e6}{draw\+\_\+bar}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function to display the actionbar in the game that the user interacts with to build turrets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWorld_aab29f830b97215d2af7c366eb8ba0953}{spawn\+\_\+turret}} (sf\+::\+Vector2f position)
+\begin{DoxyCompactList}\small\item\em Function to store a new \mbox{\hyperlink{classTurret}{Turret}} class object into a specific data container. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWorld_a6fb82e0c1d4e67a9777365bb9d3b3267}{place\+\_\+turret}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function to store a new \mbox{\hyperlink{classTurret}{Turret}} class object into a specific data container. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classTurret}{Turret}} $\ast$ $>$ \& \mbox{\hyperlink{classWorld_abf2036b660127139f5a8fa98c57a986b}{get\+\_\+turrets\+\_\+to\+\_\+place}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns a vector by reference that stores \mbox{\hyperlink{classTurret}{Turret}} objects in queue to be placed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWorld_aa7030d2f36e5329da4316d701a35f739}\label{classWorld_aa7030d2f36e5329da4316d701a35f739}} 
+void \mbox{\hyperlink{classWorld_aa7030d2f36e5329da4316d701a35f739}{spawn\+\_\+enemy}} ()
+\begin{DoxyCompactList}\small\item\em Function to store a new \mbox{\hyperlink{classEnemy}{Enemy}} class object in a specific data container. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classWorld_ab58ed20ca6135ac8a5e3a5fd8a3e5d14}{get\+\_\+checkpoint}} (int index) const
+\begin{DoxyCompactList}\small\item\em Function that returns a certain coordinate pair on index in a specific data container wich represent the path that is the displayed in the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classActionbar}{Actionbar}} \& \mbox{\hyperlink{classWorld_a1d30e219ca6e09be9b1b3ada33c0178a}{get\+\_\+actionbar}} ()
+\begin{DoxyCompactList}\small\item\em Function that return the actionbar objects by reference. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \& \mbox{\hyperlink{classWorld_a71113bbab12a6748a2d0fd6368848089}{get\+\_\+objects}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns a vector by reference containing all the entities displayed in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWorld_a3a2cf04c8163bf1ffe4c593dfbf738e6}\label{classWorld_a3a2cf04c8163bf1ffe4c593dfbf738e6}} 
+\index{World@{World}!draw\_bar@{draw\_bar}}
+\index{draw\_bar@{draw\_bar}!World@{World}}
+\doxysubsubsection{\texorpdfstring{draw\_bar()}{draw\_bar()}}
+{\footnotesize\ttfamily void World\+::draw\+\_\+bar (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Function to display the actionbar in the game that the user interacts with to build turrets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & an sf\+::\+Render\+Window argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWorld_a332c86b51fdf971b2e4f3408377fd3b5}\label{classWorld_a332c86b51fdf971b2e4f3408377fd3b5}} 
+\index{World@{World}!draw\_objects@{draw\_objects}}
+\index{draw\_objects@{draw\_objects}!World@{World}}
+\doxysubsubsection{\texorpdfstring{draw\_objects()}{draw\_objects()}}
+{\footnotesize\ttfamily void World\+::draw\+\_\+objects (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Function to display all the entitites stored in a specific data container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & an sf\+::\+Render\+Window argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWorld_a1d30e219ca6e09be9b1b3ada33c0178a}\label{classWorld_a1d30e219ca6e09be9b1b3ada33c0178a}} 
+\index{World@{World}!get\_actionbar@{get\_actionbar}}
+\index{get\_actionbar@{get\_actionbar}!World@{World}}
+\doxysubsubsection{\texorpdfstring{get\_actionbar()}{get\_actionbar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classActionbar}{Actionbar}} \& World\+::get\+\_\+actionbar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that return the actionbar objects by reference. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classActionbar}{Actionbar}}\& The Action bar class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorld_ab58ed20ca6135ac8a5e3a5fd8a3e5d14}\label{classWorld_ab58ed20ca6135ac8a5e3a5fd8a3e5d14}} 
+\index{World@{World}!get\_checkpoint@{get\_checkpoint}}
+\index{get\_checkpoint@{get\_checkpoint}!World@{World}}
+\doxysubsubsection{\texorpdfstring{get\_checkpoint()}{get\_checkpoint()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f World\+::get\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Function that returns a certain coordinate pair on index in a specific data container wich represent the path that is the displayed in the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & an integer argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f The coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorld_a71113bbab12a6748a2d0fd6368848089}\label{classWorld_a71113bbab12a6748a2d0fd6368848089}} 
+\index{World@{World}!get\_objects@{get\_objects}}
+\index{get\_objects@{get\_objects}!World@{World}}
+\doxysubsubsection{\texorpdfstring{get\_objects()}{get\_objects()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \& World\+::get\+\_\+objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that returns a vector by reference containing all the entities displayed in the game. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Entity $\ast$$>$\& a vector containing \mbox{\hyperlink{classEntity}{Entity}} pointers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorld_abf2036b660127139f5a8fa98c57a986b}\label{classWorld_abf2036b660127139f5a8fa98c57a986b}} 
+\index{World@{World}!get\_turrets\_to\_place@{get\_turrets\_to\_place}}
+\index{get\_turrets\_to\_place@{get\_turrets\_to\_place}!World@{World}}
+\doxysubsubsection{\texorpdfstring{get\_turrets\_to\_place()}{get\_turrets\_to\_place()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classTurret}{Turret}} $\ast$ $>$ \& World\+::get\+\_\+turrets\+\_\+to\+\_\+place (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that returns a vector by reference that stores \mbox{\hyperlink{classTurret}{Turret}} objects in queue to be placed. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Turret $\ast$$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorld_a6fb82e0c1d4e67a9777365bb9d3b3267}\label{classWorld_a6fb82e0c1d4e67a9777365bb9d3b3267}} 
+\index{World@{World}!place\_turret@{place\_turret}}
+\index{place\_turret@{place\_turret}!World@{World}}
+\doxysubsubsection{\texorpdfstring{place\_turret()}{place\_turret()}}
+{\footnotesize\ttfamily void World\+::place\+\_\+turret (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Function to store a new \mbox{\hyperlink{classTurret}{Turret}} class object into a specific data container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & an sf\+::\+Vector2f argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWorld_aab29f830b97215d2af7c366eb8ba0953}\label{classWorld_aab29f830b97215d2af7c366eb8ba0953}} 
+\index{World@{World}!spawn\_turret@{spawn\_turret}}
+\index{spawn\_turret@{spawn\_turret}!World@{World}}
+\doxysubsubsection{\texorpdfstring{spawn\_turret()}{spawn\_turret()}}
+{\footnotesize\ttfamily void World\+::spawn\+\_\+turret (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+
+
+Function to store a new \mbox{\hyperlink{classTurret}{Turret}} class object into a specific data container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & an sf\+::\+Vector2f argument. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWorld_a56a188dc66cbce4e93615789df013997}\label{classWorld_a56a188dc66cbce4e93615789df013997}} 
+\index{World@{World}!update\_objects@{update\_objects}}
+\index{update\_objects@{update\_objects}!World@{World}}
+\doxysubsubsection{\texorpdfstring{update\_objects()}{update\_objects()}}
+{\footnotesize\ttfamily void World\+::update\+\_\+objects (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{delta }\end{DoxyParamCaption})}
+
+
+
+Function to update all entities inside the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & -\/ an sf\+::\+Time argument. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+world.\+h\item 
+world.\+cc\end{DoxyCompactItemize}
