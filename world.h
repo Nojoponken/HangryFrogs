@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <algorithm>
 
 #include "entity.h"
 #include "turret.h"
@@ -23,9 +24,10 @@ private:
     int wave;
     std::vector<sf::Texture> textures;
     std::vector<sf::Vector2f> path;
+    int path_radius;
     // vector<Enemy> current_wave{};
     Actionbar actionbar;
-    std::vector<Turret *> turrets_to_place;
+    std::string turret_name;
 
 public:
     World();
@@ -60,12 +62,8 @@ public:
      * @param window an sf::Vector2f argument.
      */
     void place_turret(sf::RenderWindow &window);
-    /**
-     * @brief Function that returns a vector by reference that stores Turret objects in queue to be placed.
-     *
-     * @return std::vector<Turret *>&
-     */
-    std::vector<Turret *> &get_turrets_to_place();
+
+    std::string &get_turret_name();
     /**
      * @brief Function to store a new Enemy class object in a specific data container.
      *
@@ -90,6 +88,8 @@ public:
      * @return std::vector<Entity *>& a vector containing Entity pointers.
      */
     std::vector<Entity *> &get_objects();
+
+    bool collision(sf::Vector2f entity_coord, int entity_rad);
 };
 
 #endif

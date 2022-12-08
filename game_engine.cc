@@ -52,7 +52,7 @@ void Game_Engine::run()
 
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
-                if (!world.get_actionbar().on_bar(window, world.get_turrets_to_place()))
+                if (!world.get_actionbar().on_bar(window, world.get_turret_name()))
                 {
 
                     world.place_turret(window);

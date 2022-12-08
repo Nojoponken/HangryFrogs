@@ -27,3 +27,8 @@ void Entity::draw(sf::RenderWindow &window)
 
     window.draw(sprite);
 }
+
+sf::Vector2f Entity::get_coordinates()
+{
+    return coordinates;
+}

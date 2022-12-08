@@ -23,10 +23,8 @@ public:
     void set_barsprite(sf::Texture &texture);
     void set_coord(sf::Vector2f coord);
     void draw_bar(sf::RenderWindow &window);
-    void add_button(sf::Texture &texture, Turret *turret);
-    // void on_bar(sf::RenderWindow &window, Turret *turret);
+    void add_button(sf::Texture &texture, std::string const &name);
 
-    bool on_bar(sf::RenderWindow &window, std::vector<Turret *> &turrets_to_place);
+    bool on_bar(sf::RenderWindow &window, std::string &turret_name);
 };
-
 #endif

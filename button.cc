@@ -1,45 +1,28 @@
 #include "button.h"
-template <typename T>
-Button<T>::Button(sf::Texture &texture, Turret *turret)
-    : button_sprite{texture}, turret{turret}
+
+Button::Button(sf::Texture &texture, std::string const &name)
+    : button_sprite{}, name{name}
 {
     button_sprite.setTexture(texture);
-}
-
-template <typename T>
-Button<T>::~Button()
-{
-    delete turret;
-}
-
-template <typename T>
-void Button<T>::draw_button(sf::RenderWindow &window)
-{
-
     button_sprite.setScale(0.5, 0.5);
+}
+
+void Button::draw_button(sf::RenderWindow &window)
+{
     window.draw(button_sprite);
 }
 
-template <typename T>
-void Button<T>::set_position(sf::Vector2f coordinates)
+void Button::set_position(sf::Vector2f coordinates)
 {
     button_sprite.setPosition(coordinates.x, coordinates.y);
 }
 
-template <typename T>
-sf::Sprite &Button<T>::get_sprite()
+sf::Sprite Button::get_sprite() const
 {
     return button_sprite;
 }
 
-template <typename T>
-void Button<T>::set_turret_pos(sf::RenderWindow &window)
+std::string Button::get_name() const
 {
-    turret->set_position(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
-}
-
-template <typename T>
-Turret *Button<T>::get_turret()
-{
-    return new T{turret};
+    return name;
 }

@@ -39,9 +39,9 @@ void Actionbar::draw_bar(sf::RenderWindow &window)
     }
 }
 
-void Actionbar::add_button(sf::Texture &texture, Turret *turret)
+void Actionbar::add_button(sf::Texture &texture, std::string const &name)
 {
-    buttons.push_back(new Button{texture, turret});
+    buttons.push_back(new Button{texture, name});
 }
 
 /* void Actionbar::on_bar(sf::RenderWindow &window, Turret *turret)
@@ -69,7 +69,7 @@ void Actionbar::add_button(sf::Texture &texture, Turret *turret)
     }
 } */
 
-bool Actionbar::on_bar(sf::RenderWindow &window, std::vector<Turret *> &turrets_to_place)
+bool Actionbar::on_bar(sf::RenderWindow &window, std::string &turret_name)
 {
     sf::FloatRect bar_bounds{bar_sprite.getGlobalBounds()};
     sf::Vector2f mousepos{window.mapPixelToCoords(sf::Mouse::getPosition(window))};
@@ -83,7 +83,7 @@ bool Actionbar::on_bar(sf::RenderWindow &window, std::vector<Turret *> &turrets_
 
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                 {
-                    turrets_to_place.push_back(button->get_turret());
+                    turret_name = button->get_name();
                     return true;
                 }
 

@@ -2,9 +2,13 @@
 #define PEPE_H
 
 #include "turret.h"
+#include "world.h"
 
 class Pepe : public Turret
 {
+private:
+    void attack(World &world, sf::Time delta) override;
+
 public:
     Pepe(sf::Texture &texture, sf::Vector2f position);
 

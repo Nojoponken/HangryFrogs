@@ -7,15 +7,17 @@ class Button
 {
 private:
     sf::Sprite button_sprite;
-    std::string name;
+    Turret *turret;
 
 public:
-    Button(sf::Texture &texture, std::string const &name);
-    ~Button() = default;
+    Button(sf::Texture &texture, Turret *turret);
+    ~Button();
     void draw_button(sf::RenderWindow &window);
     void set_position(sf::Vector2f coordinates);
-    sf::Sprite get_sprite() const;
-    std::string get_name() const;
+    sf::Sprite &get_sprite();
+
+    void set_turret_pos(sf::RenderWindow &window);
+    Turret *get_turret();
 };
 
 #endif
