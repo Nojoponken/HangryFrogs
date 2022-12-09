@@ -1,14 +1,14 @@
-#include "actionbar.h"
+#include "user_interface.h"
 #include <iostream>
-Actionbar::Actionbar()
+User_Interface::User_Interface()
     : bar_sprite{}, coordinates{}, buttons{}
 {
 }
-Actionbar::Actionbar(sf::Texture &texture, sf::Vector2f const &coordinates)
+User_Interface::User_Interface(sf::Texture &texture, sf::Vector2f const &coordinates)
     : bar_sprite{texture}, coordinates{coordinates}, buttons{}
 {
 }
-Actionbar::~Actionbar()
+User_Interface::~User_Interface()
 {
     for (auto button : buttons)
     {
@@ -16,16 +16,16 @@ Actionbar::~Actionbar()
     }
 }
 
-void Actionbar::set_barsprite(sf::Texture &texture)
+void User_Interface::set_barsprite(sf::Texture &texture)
 {
     bar_sprite.setTexture(texture);
 }
-void Actionbar::set_coord(sf::Vector2f coord)
+void User_Interface::set_coord(sf::Vector2f coord)
 {
     coordinates = coord;
 }
 
-void Actionbar::draw_bar(sf::RenderWindow &window)
+void User_Interface::draw_bar(sf::RenderWindow &window)
 {
 
     bar_sprite.setPosition(coordinates);
@@ -39,7 +39,7 @@ void Actionbar::draw_bar(sf::RenderWindow &window)
     }
 }
 
-void Actionbar::add_button(sf::Texture &texture, std::string const &name)
+void User_Interface::add_button(sf::Texture &texture, std::string const &name)
 {
     buttons.push_back(new Button{texture, name});
 }
@@ -69,7 +69,7 @@ void Actionbar::add_button(sf::Texture &texture, std::string const &name)
     }
 } */
 
-bool Actionbar::on_bar(sf::RenderWindow &window, std::string &turret_name)
+bool User_Interface::on_bar(sf::RenderWindow &window, std::string &turret_name)
 {
     sf::FloatRect bar_bounds{bar_sprite.getGlobalBounds()};
     sf::Vector2f mousepos{window.mapPixelToCoords(sf::Mouse::getPosition(window))};

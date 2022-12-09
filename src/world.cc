@@ -2,7 +2,7 @@
 
 World::World()
     : health{100}, resource{80},
-      actionbar{}, turret_name{},
+      user_interface{}, turret_name{},
       path{}, path_radius{10}, wave{0}
 {
     textures.push_back(sf::Texture{});
@@ -59,10 +59,10 @@ World::World()
             {729, 683},
             {774, 800}};
 
-    actionbar.set_coord({0, 758});
-    actionbar.set_barsprite(textures[4]);
-    actionbar.add_button(textures[2], "Pepe");
-    actionbar.add_button(textures[3], "Frost");
+    user_interface.set_coord({0, 758});
+    user_interface.set_barsprite(textures[4]);
+    user_interface.add_button(textures[2], "Pepe");
+    user_interface.add_button(textures[3], "Frost");
 }
 World::~World()
 {
@@ -81,7 +81,7 @@ void World::draw_objects(sf::RenderWindow &window)
 }
 void World::draw_bar(sf::RenderWindow &window)
 {
-    actionbar.draw_bar(window);
+    user_interface.draw_bar(window);
 }
 void World::update_objects(sf::Time delta)
 {
@@ -131,9 +131,9 @@ sf::Vector2f World::get_checkpoint(int index) const
     return path[index];
 }
 
-Actionbar &World::get_actionbar()
+User_Interface &World::get_user_interface()
 {
-    return actionbar;
+    return user_interface;
 }
 
 std::vector<Entity *> &World::get_objects()

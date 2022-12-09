@@ -9,7 +9,7 @@
 #include "turret.h"
 #include "pepe.h"
 #include "enemy.h"
-#include "actionbar.h"
+#include "user_interface.h"
 
 /**
  * @brief A class to represent the game
@@ -26,7 +26,7 @@ private:
     std::vector<sf::Vector2f> path;
     int path_radius;
     // vector<Enemy> current_wave{};
-    Actionbar actionbar;
+    User_Interface user_interface;
     std::string turret_name;
 
 public:
@@ -81,7 +81,7 @@ public:
      *
      * @return Actionbar& The Action bar class.
      */
-    Actionbar &get_actionbar();
+    User_Interface &get_user_interface();
     /**
      * @brief Function that returns a vector by reference containing all the entities displayed in the game.
      *

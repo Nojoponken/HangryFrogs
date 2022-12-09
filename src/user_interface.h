@@ -7,7 +7,7 @@
 #include "button.h"
 #include "turret.h"
 
-class Actionbar
+class User_Interface
 {
 
 private:
@@ -17,9 +17,9 @@ private:
     int button_index;
 
 public:
-    Actionbar();
-    Actionbar(sf::Texture &texture, sf::Vector2f const &coordinates);
-    ~Actionbar();
+    User_Interface();
+    User_Interface(sf::Texture &texture, sf::Vector2f const &coordinates);
+    ~User_Interface();
     void set_barsprite(sf::Texture &texture);
     void set_coord(sf::Vector2f coord);
     void draw_bar(sf::RenderWindow &window);
