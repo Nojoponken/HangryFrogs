@@ -10,20 +10,23 @@
 class Entity
 {
 private:
-    float radius; ///
+    int radius; ///
     sf::Sprite sprite;
 
 public:
-    Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius);
+    Entity(sf::Texture &texture, sf::Vector2f coordinates, int radius);
     virtual ~Entity() = default;
     virtual void update(sf::Time delta) = 0;
     void draw(sf::RenderWindow &window);
-    sf::Vector2f get_coordinates();
+    float distance(sf::Vector2f other) const;
+
+    sf::Vector2f get_coordinates() const;
+    int get_radius() const;
+    bool collision(Entity const &other);
 
 protected:
     sf::Vector2f direction;
     sf::Vector2f coordinates;
-    bool collide();
 };
 
 #endif
