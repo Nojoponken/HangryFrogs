@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/linlo001/TDP005/hangry_frogs
+CMAKE_SOURCE_DIR = /home/noali443/hangry_frogs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/linlo001/TDP005/hangry_frogs/build
+CMAKE_BINARY_DIR = /home/noali443/hangry_frogs/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/linlo001/TDP005/hangry_frogs/build/CMakeFiles /home/linlo001/TDP005/hangry_frogs/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/noali443/hangry_frogs/build/CMakeFiles /home/noali443/hangry_frogs/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/linlo001/TDP005/hangry_frogs/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/noali443/hangry_frogs/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,221 +129,221 @@ game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
-actionbar.o: actionbar.cc.o
-.PHONY : actionbar.o
+src/actionbar.o: src/actionbar.cc.o
+.PHONY : src/actionbar.o
 
 # target to build an object file
-actionbar.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/actionbar.cc.o
-.PHONY : actionbar.cc.o
+src/actionbar.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/actionbar.cc.o
+.PHONY : src/actionbar.cc.o
 
-actionbar.i: actionbar.cc.i
-.PHONY : actionbar.i
+src/actionbar.i: src/actionbar.cc.i
+.PHONY : src/actionbar.i
 
 # target to preprocess a source file
-actionbar.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/actionbar.cc.i
-.PHONY : actionbar.cc.i
+src/actionbar.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/actionbar.cc.i
+.PHONY : src/actionbar.cc.i
 
-actionbar.s: actionbar.cc.s
-.PHONY : actionbar.s
+src/actionbar.s: src/actionbar.cc.s
+.PHONY : src/actionbar.s
 
 # target to generate assembly for a file
-actionbar.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/actionbar.cc.s
-.PHONY : actionbar.cc.s
+src/actionbar.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/actionbar.cc.s
+.PHONY : src/actionbar.cc.s
 
-button.o: button.cc.o
-.PHONY : button.o
+src/button.o: src/button.cc.o
+.PHONY : src/button.o
 
 # target to build an object file
-button.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/button.cc.o
-.PHONY : button.cc.o
+src/button.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/button.cc.o
+.PHONY : src/button.cc.o
 
-button.i: button.cc.i
-.PHONY : button.i
+src/button.i: src/button.cc.i
+.PHONY : src/button.i
 
 # target to preprocess a source file
-button.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/button.cc.i
-.PHONY : button.cc.i
+src/button.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/button.cc.i
+.PHONY : src/button.cc.i
 
-button.s: button.cc.s
-.PHONY : button.s
+src/button.s: src/button.cc.s
+.PHONY : src/button.s
 
 # target to generate assembly for a file
-button.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/button.cc.s
-.PHONY : button.cc.s
+src/button.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/button.cc.s
+.PHONY : src/button.cc.s
 
-enemy.o: enemy.cc.o
-.PHONY : enemy.o
+src/enemy.o: src/enemy.cc.o
+.PHONY : src/enemy.o
 
 # target to build an object file
-enemy.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/enemy.cc.o
-.PHONY : enemy.cc.o
+src/enemy.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/enemy.cc.o
+.PHONY : src/enemy.cc.o
 
-enemy.i: enemy.cc.i
-.PHONY : enemy.i
+src/enemy.i: src/enemy.cc.i
+.PHONY : src/enemy.i
 
 # target to preprocess a source file
-enemy.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/enemy.cc.i
-.PHONY : enemy.cc.i
+src/enemy.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/enemy.cc.i
+.PHONY : src/enemy.cc.i
 
-enemy.s: enemy.cc.s
-.PHONY : enemy.s
+src/enemy.s: src/enemy.cc.s
+.PHONY : src/enemy.s
 
 # target to generate assembly for a file
-enemy.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/enemy.cc.s
-.PHONY : enemy.cc.s
+src/enemy.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/enemy.cc.s
+.PHONY : src/enemy.cc.s
 
-entity.o: entity.cc.o
-.PHONY : entity.o
+src/entity.o: src/entity.cc.o
+.PHONY : src/entity.o
 
 # target to build an object file
-entity.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/entity.cc.o
-.PHONY : entity.cc.o
+src/entity.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/entity.cc.o
+.PHONY : src/entity.cc.o
 
-entity.i: entity.cc.i
-.PHONY : entity.i
+src/entity.i: src/entity.cc.i
+.PHONY : src/entity.i
 
 # target to preprocess a source file
-entity.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/entity.cc.i
-.PHONY : entity.cc.i
+src/entity.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/entity.cc.i
+.PHONY : src/entity.cc.i
 
-entity.s: entity.cc.s
-.PHONY : entity.s
+src/entity.s: src/entity.cc.s
+.PHONY : src/entity.s
 
 # target to generate assembly for a file
-entity.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/entity.cc.s
-.PHONY : entity.cc.s
+src/entity.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/entity.cc.s
+.PHONY : src/entity.cc.s
 
-game_engine.o: game_engine.cc.o
-.PHONY : game_engine.o
+src/game_engine.o: src/game_engine.cc.o
+.PHONY : src/game_engine.o
 
 # target to build an object file
-game_engine.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_engine.cc.o
-.PHONY : game_engine.cc.o
+src/game_engine.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_engine.cc.o
+.PHONY : src/game_engine.cc.o
 
-game_engine.i: game_engine.cc.i
-.PHONY : game_engine.i
+src/game_engine.i: src/game_engine.cc.i
+.PHONY : src/game_engine.i
 
 # target to preprocess a source file
-game_engine.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_engine.cc.i
-.PHONY : game_engine.cc.i
+src/game_engine.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_engine.cc.i
+.PHONY : src/game_engine.cc.i
 
-game_engine.s: game_engine.cc.s
-.PHONY : game_engine.s
+src/game_engine.s: src/game_engine.cc.s
+.PHONY : src/game_engine.s
 
 # target to generate assembly for a file
-game_engine.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_engine.cc.s
-.PHONY : game_engine.cc.s
+src/game_engine.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game_engine.cc.s
+.PHONY : src/game_engine.cc.s
 
-main.o: main.cc.o
-.PHONY : main.o
+src/main.o: src/main.cc.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.o
-.PHONY : main.cc.o
+src/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cc.o
+.PHONY : src/main.cc.o
 
-main.i: main.cc.i
-.PHONY : main.i
+src/main.i: src/main.cc.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.i
-.PHONY : main.cc.i
+src/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cc.i
+.PHONY : src/main.cc.i
 
-main.s: main.cc.s
-.PHONY : main.s
+src/main.s: src/main.cc.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.s
-.PHONY : main.cc.s
+src/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cc.s
+.PHONY : src/main.cc.s
 
-pepe.o: pepe.cc.o
-.PHONY : pepe.o
+src/pepe.o: src/pepe.cc.o
+.PHONY : src/pepe.o
 
 # target to build an object file
-pepe.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/pepe.cc.o
-.PHONY : pepe.cc.o
+src/pepe.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/pepe.cc.o
+.PHONY : src/pepe.cc.o
 
-pepe.i: pepe.cc.i
-.PHONY : pepe.i
+src/pepe.i: src/pepe.cc.i
+.PHONY : src/pepe.i
 
 # target to preprocess a source file
-pepe.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/pepe.cc.i
-.PHONY : pepe.cc.i
+src/pepe.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/pepe.cc.i
+.PHONY : src/pepe.cc.i
 
-pepe.s: pepe.cc.s
-.PHONY : pepe.s
+src/pepe.s: src/pepe.cc.s
+.PHONY : src/pepe.s
 
 # target to generate assembly for a file
-pepe.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/pepe.cc.s
-.PHONY : pepe.cc.s
+src/pepe.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/pepe.cc.s
+.PHONY : src/pepe.cc.s
 
-turret.o: turret.cc.o
-.PHONY : turret.o
+src/turret.o: src/turret.cc.o
+.PHONY : src/turret.o
 
 # target to build an object file
-turret.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/turret.cc.o
-.PHONY : turret.cc.o
+src/turret.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/turret.cc.o
+.PHONY : src/turret.cc.o
 
-turret.i: turret.cc.i
-.PHONY : turret.i
+src/turret.i: src/turret.cc.i
+.PHONY : src/turret.i
 
 # target to preprocess a source file
-turret.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/turret.cc.i
-.PHONY : turret.cc.i
+src/turret.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/turret.cc.i
+.PHONY : src/turret.cc.i
 
-turret.s: turret.cc.s
-.PHONY : turret.s
+src/turret.s: src/turret.cc.s
+.PHONY : src/turret.s
 
 # target to generate assembly for a file
-turret.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/turret.cc.s
-.PHONY : turret.cc.s
+src/turret.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/turret.cc.s
+.PHONY : src/turret.cc.s
 
-world.o: world.cc.o
-.PHONY : world.o
+src/world.o: src/world.cc.o
+.PHONY : src/world.o
 
 # target to build an object file
-world.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/world.cc.o
-.PHONY : world.cc.o
+src/world.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/world.cc.o
+.PHONY : src/world.cc.o
 
-world.i: world.cc.i
-.PHONY : world.i
+src/world.i: src/world.cc.i
+.PHONY : src/world.i
 
 # target to preprocess a source file
-world.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/world.cc.i
-.PHONY : world.cc.i
+src/world.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/world.cc.i
+.PHONY : src/world.cc.i
 
-world.s: world.cc.s
-.PHONY : world.s
+src/world.s: src/world.cc.s
+.PHONY : src/world.s
 
 # target to generate assembly for a file
-world.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/world.cc.s
-.PHONY : world.cc.s
+src/world.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/world.cc.s
+.PHONY : src/world.cc.s
 
 # Help Target
 help:
@@ -354,33 +354,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... game"
-	@echo "... actionbar.o"
-	@echo "... actionbar.i"
-	@echo "... actionbar.s"
-	@echo "... button.o"
-	@echo "... button.i"
-	@echo "... button.s"
-	@echo "... enemy.o"
-	@echo "... enemy.i"
-	@echo "... enemy.s"
-	@echo "... entity.o"
-	@echo "... entity.i"
-	@echo "... entity.s"
-	@echo "... game_engine.o"
-	@echo "... game_engine.i"
-	@echo "... game_engine.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... pepe.o"
-	@echo "... pepe.i"
-	@echo "... pepe.s"
-	@echo "... turret.o"
-	@echo "... turret.i"
-	@echo "... turret.s"
-	@echo "... world.o"
-	@echo "... world.i"
-	@echo "... world.s"
+	@echo "... src/actionbar.o"
+	@echo "... src/actionbar.i"
+	@echo "... src/actionbar.s"
+	@echo "... src/button.o"
+	@echo "... src/button.i"
+	@echo "... src/button.s"
+	@echo "... src/enemy.o"
+	@echo "... src/enemy.i"
+	@echo "... src/enemy.s"
+	@echo "... src/entity.o"
+	@echo "... src/entity.i"
+	@echo "... src/entity.s"
+	@echo "... src/game_engine.o"
+	@echo "... src/game_engine.i"
+	@echo "... src/game_engine.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/pepe.o"
+	@echo "... src/pepe.i"
+	@echo "... src/pepe.s"
+	@echo "... src/turret.o"
+	@echo "... src/turret.i"
+	@echo "... src/turret.s"
+	@echo "... src/world.o"
+	@echo "... src/world.i"
+	@echo "... src/world.s"
 .PHONY : help
 
 

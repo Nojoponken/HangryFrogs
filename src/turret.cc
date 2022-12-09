@@ -5,10 +5,6 @@ Turret::Turret(sf::Texture &texture, sf::Vector2f coordinates, int radius, int a
 {
 }
 
-void Turret::shoot()
-{
-}
-
 void Turret::update(sf::Time delta)
 {
 

@@ -11,12 +11,12 @@ World::World()
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
-    textures[0].loadFromFile("../pepeheadsprite.png");
-    textures[1].loadFromFile("../flysprite.png");
-    textures[2].loadFromFile("../pepe.png");
-    textures[3].loadFromFile("../frost.png");
-    textures[4].loadFromFile("../bar.png");
-    textures[5].loadFromFile("../frostheadsprite.png");
+    textures[0].loadFromFile("../assets/pepeheadsprite.png");
+    textures[1].loadFromFile("../assets/flysprite.png");
+    textures[2].loadFromFile("../assets/pepe.png");
+    textures[3].loadFromFile("../assets/frost.png");
+    textures[4].loadFromFile("../assets/bar.png");
+    textures[5].loadFromFile("../assets/frostheadsprite.png");
     path = {{939, 295},
             {902, 267},
             {892, 242},

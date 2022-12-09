@@ -4,7 +4,9 @@
 #include <cmath>
 
 #include "entity.h"
-#include "world.h"
+
+class World;
+
 class Turret : public Entity
 {
 private:

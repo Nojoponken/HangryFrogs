@@ -15,23 +15,23 @@ endforeach(i)
 
 # Ange källfiler, lägg till de filer som ni behöver!
 set(SOURCE_FILES
-  main.cc
-  game_engine.h
-  game_engine.cc
-  entity.h
-  entity.cc
-  world.h
-  world.cc
-  turret.h
-  turret.cc
-  enemy.h
-  enemy.cc
-  pepe.h
-  pepe.cc
-  actionbar.h
-  actionbar.cc
-  button.h
-  button.cc
+  src/main.cc
+  src/game_engine.h
+  src/game_engine.cc
+  src/entity.h
+  src/entity.cc
+  src/world.h
+  src/world.cc
+  src/turret.h
+  src/turret.cc
+  src/enemy.h
+  src/enemy.cc
+  src/pepe.h
+  src/pepe.cc
+  src/actionbar.h
+  src/actionbar.cc
+  src/button.h
+  src/button.cc
   )
 
 add_compile_options("-g")

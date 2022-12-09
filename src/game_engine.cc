@@ -11,7 +11,7 @@ Game_Engine::~Game_Engine()
 void Game_Engine::run()
 {
     sf::Texture backg{};
-    backg.loadFromFile("../bg.png");
+    backg.loadFromFile("../assets/bg.png");
     sf::Sprite background{backg};
 
     /*    sf::Texture btn1{};
