@@ -1,6 +1,6 @@
 #include "entity.h"
 
-Entity::Entity(sf::Texture &texture, sf::Vector2f &coordinates, float radius)
+Entity::Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius)
     : sprite{}, coordinates{coordinates}, direction{1, 0}, radius{radius}
 {
     sprite.setTexture(texture);

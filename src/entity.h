@@ -21,7 +21,7 @@ public:
      * @param coordinates
      * @param radius
      */
-    Entity(sf::Texture &texture, sf::Vector2f &coordinates, float radius);
+    Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius);
     virtual ~Entity() = default;
     virtual void update(sf::Time delta) = 0;
     void draw(sf::RenderWindow &window);
