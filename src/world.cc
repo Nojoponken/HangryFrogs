@@ -91,12 +91,26 @@ void World::update_objects(sf::Time delta)
     {
         o->update(delta);
     }
+
+    entities.erase(remove_if(entities.begin(), entities.end(), [](Entity *entity)
+                             {
+                  Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+                  if(!enemy)
+                  {
+                    return false;
+                  }
+                  if (enemy->get_health() )
+                  {
+                    return false;
+                  } 
+                  return true; }),
+                   entities.end());
 }
 
 void World::spawn_turret(sf::Vector2f position)
 {
     entities.push_back(
-        new Pepe{textures[0], position});
+        new Pepe{textures[0], position, entities});
 }
 
 void World::place_turret(sf::RenderWindow &window)
@@ -110,12 +124,12 @@ void World::place_turret(sf::RenderWindow &window)
         if (turret_name == "Pepe")
         {
 
-            entities.push_back(new Pepe{textures[0], mousepos});
+            entities.push_back(new Pepe{textures[0], mousepos, entities});
         }
         else if (turret_name == "Frost")
         {
 
-            entities.push_back(new Pepe{textures[5], mousepos});
+            entities.push_back(new Pepe{textures[5], mousepos, entities});
         }
     }
 

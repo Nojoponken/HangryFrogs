@@ -22,3 +22,16 @@ void Enemy::update(sf::Time delta)
 
     direction = {dx, dy};
 }
+
+void Enemy::take_damage()
+{
+    if (health > 0)
+    {
+        health -= 1;
+    }
+}
+
+int Enemy::get_health() const
+{
+    return health;
+}

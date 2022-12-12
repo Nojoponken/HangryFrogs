@@ -1,6 +1,6 @@
 #include "entity.h"
 
-Entity::Entity(sf::Texture &texture, sf::Vector2f coordinates, int radius)
+Entity::Entity(sf::Texture &texture, sf::Vector2f &coordinates, float radius)
     : sprite{}, coordinates{coordinates}, direction{1, 0}, radius{radius}
 {
     sprite.setTexture(texture);
@@ -39,15 +39,15 @@ float Entity::distance(sf::Vector2f other) const
     float y{coordinates.y - other.y};
     return std::sqrt(x * x + y * y);
 }
-bool Entity::collision(Entity const &other)
+bool Entity::collision(int const rad, Entity const &other)
 {
     bool collided{(distance(other.get_coordinates()) <
-                   (radius + other.get_radius()))};
+                   (rad + other.get_radius()))};
 
     return collided;
 }
 
-int Entity::get_radius() const
+float Entity::get_radius() const
 {
     return radius;
 }

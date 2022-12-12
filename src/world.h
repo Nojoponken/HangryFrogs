@@ -89,7 +89,7 @@ public:
      */
     std::vector<Entity *> &get_objects();
 
-        bool collision(sf::Vector2f entity_coord, int entity_rad);
+    bool collision(sf::Vector2f entity_coord, int entity_rad);
 };
 
 #endif
