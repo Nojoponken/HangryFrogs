@@ -143,7 +143,7 @@ void World::place_turret(sf::RenderWindow &window)
         {
             Pepe pepe{textures[0], mousepos, entities};
 
-            if (!pepe.collision_tower(pepe.get_radius() - 45, entities))
+            if (!pepe.collision_turrets(pepe.get_radius() - 45, entities))
             {
                 entities.push_back(new Pepe{textures[0], mousepos, entities});
                 placed = true;
@@ -156,7 +156,7 @@ void World::place_turret(sf::RenderWindow &window)
 
             Pepe pepe{textures[5], mousepos, entities};
 
-            if (!pepe.collision_tower(pepe.get_radius() - 45, entities))
+            if (!pepe.collision_turrets(pepe.get_radius() - 45, entities))
             {
                 entities.push_back(new Pepe{textures[5], mousepos, entities});
                 placed = true;

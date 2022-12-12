@@ -25,7 +25,7 @@ void Turret::set_position(sf::Vector2f coord)
     coordinates = coord;
 }
 
-bool Turret::collision_tower(int const rad, std::vector<Entity *> &entities)
+bool Turret::collision_turrets(int const rad, std::vector<Entity *> &entities)
 {
     for (Entity *entity : entities)
     {

@@ -16,7 +16,7 @@ public:
     virtual ~Turret() = default;
     virtual void update(sf::Time delta) override;
     void set_position(sf::Vector2f coord);
-    virtual bool collision_tower(int const rad, std::vector<Entity *> &entities);
+    virtual bool collision_turrets(int const rad, std::vector<Entity *> &entities);
 
 protected:
     int attack_radius;
