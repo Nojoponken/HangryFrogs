@@ -1,9 +1,9 @@
 #include "world.h"
 
 World::World()
-    : health{100}, resource{80},
-      user_interface{}, turret_name{},
-      path{}, path_radius{10}, wave{0}
+    : user_interface{}, turret_name{},
+      path{}, path_radius{10},
+      wave{0}, current_wave{}, spawn_clock{0}
 {
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
@@ -63,6 +63,11 @@ World::World()
     user_interface.set_barsprite(textures[4]);
     user_interface.add_button(textures[2], "Pepe");
     user_interface.add_button(textures[3], "Frost");
+
+    for (int i = 0; i < 17; ++i)
+    {
+        current_wave.push_back(new Enemy{textures[1], {1039, 295}, 20, 1, path});
+    }
 }
 World::~World()
 {
@@ -85,6 +90,14 @@ void World::draw_bar(sf::RenderWindow &window)
 }
 void World::update_objects(sf::Time delta)
 {
+    spawn_clock += delta.asSeconds();
+    std::cout << spawn_clock << std::endl;
+    if (spawn_clock > 1)
+    {
+        entities.push_back(current_wave.at(0));
+        --spawn_clock;
+    }
+
     sort(entities.begin(), entities.end(), [](Entity *a, Entity *b)
          { return a->get_coordinates().y < b->get_coordinates().y; });
     for (Entity *o : entities)
@@ -117,7 +130,6 @@ void World::place_turret(sf::RenderWindow &window)
 {
 
     sf::Vector2f mousepos{window.mapPixelToCoords(sf::Mouse::getPosition(window))};
-    bool coll{};
 
     if (!collision(mousepos, 35))
     {
@@ -131,14 +143,14 @@ void World::place_turret(sf::RenderWindow &window)
 
             entities.push_back(new Pepe{textures[5], mousepos, entities});
         }
+        turret_name = "";
     }
-
-    turret_name = "";
 }
 std::string &World::get_turret_name()
 {
     return turret_name;
 }
+
 void World::spawn_enemy()
 {
     entities.push_back(

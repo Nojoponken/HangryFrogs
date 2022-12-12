@@ -18,14 +18,13 @@
 class World
 {
 private:
-    int health;
-    int resource;
     std::vector<Entity *> entities;
+    std::vector<Entity *> current_wave;
     int wave;
+    float spawn_clock;
     std::vector<sf::Texture> textures;
     std::vector<sf::Vector2f> path;
     int path_radius;
-    // vector<Enemy> current_wave{};
     User_Interface user_interface;
     std::string turret_name;
 
