@@ -138,19 +138,39 @@ void World::place_turret(sf::RenderWindow &window)
 
     if (!collision(mousepos, 35))
     {
+        bool placed{false};
         if (turret_name == "Pepe")
         {
+            Pepe pepe{textures[0], mousepos, entities};
 
-            entities.push_back(new Pepe{textures[0], mousepos, entities});
+            if (!pepe.collision_tower(pepe.get_radius() - 45, entities))
+            {
+                entities.push_back(new Pepe{textures[0], mousepos, entities});
+                placed = true;
+            }
         }
+        // entities.push_back(new Pepe{textures[0], mousepos, entities});
+
         else if (turret_name == "Frost")
         {
 
-            entities.push_back(new Pepe{textures[5], mousepos, entities});
+            Pepe pepe{textures[5], mousepos, entities};
+
+            if (!pepe.collision_tower(pepe.get_radius() - 45, entities))
+            {
+                entities.push_back(new Pepe{textures[5], mousepos, entities});
+                placed = true;
+            }
+
+            // entities.push_back(new Pepe{textures[5], mousepos, entities});
         }
-        turret_name = "";
+        if (placed)
+        {
+            turret_name = "";
+        }
     }
 }
+
 std::string &World::get_turret_name()
 {
     return turret_name;
