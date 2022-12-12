@@ -66,7 +66,7 @@ World::World()
 
     for (int i = 0; i < 17; ++i)
     {
-        current_wave.push_back(new Enemy{textures[1], {1039, 295}, 20, 1, path});
+        current_wave.push_back(new Enemy{textures[1], {1039, 295}, 32, 1, path});
     }
 }
 World::~World()
@@ -90,12 +90,16 @@ void World::draw_bar(sf::RenderWindow &window)
 }
 void World::update_objects(sf::Time delta)
 {
-    spawn_clock += delta.asSeconds();
-    std::cout << spawn_clock << std::endl;
-    if (spawn_clock > 1)
+    if (!current_wave.empty())
     {
-        entities.push_back(current_wave.at(0));
-        --spawn_clock;
+        spawn_clock += delta.asSeconds();
+        std::cout << spawn_clock << std::endl;
+        if (spawn_clock > 1)
+        {
+            entities.push_back(current_wave.at(current_wave.size() - 1));
+            current_wave.pop_back();
+            --spawn_clock;
+        }
     }
 
     sort(entities.begin(), entities.end(), [](Entity *a, Entity *b)

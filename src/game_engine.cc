@@ -34,7 +34,6 @@ void Game_Engine::run()
     world.spawn_turret({777, 200});
     world.spawn_turret({630, 470});
     world.spawn_turret({477, 177});
-    world.spawn_enemy();
     sf::Clock clock;
     bool place_turret{false};
     sf::RenderWindow window{sf::VideoMode(1024, 858), "Hangry Frogs!"};
