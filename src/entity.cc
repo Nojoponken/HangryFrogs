@@ -1,6 +1,6 @@
 #include "entity.h"
 
-Entity::Entity(sf::Texture &texture, sf::Vector2f coordinates, int radius)
+Entity::Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius)
     : sprite{}, coordinates{coordinates}, direction{1, 0}, radius{radius}
 {
     sprite.setTexture(texture);
@@ -47,7 +47,7 @@ bool Entity::collision(Entity const &other)
     return collided;
 }
 
-int Entity::get_radius() const
+float Entity::get_radius() const
 {
     return radius;
 }

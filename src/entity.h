@@ -10,7 +10,7 @@
 class Entity
 {
 private:
-    int radius; ///
+    float radius; ///
     sf::Sprite sprite;
 
 public:
@@ -21,14 +21,14 @@ public:
      * @param coordinates
      * @param radius
      */
-    Entity(sf::Texture &texture, sf::Vector2f coordinates, int radius);
+    Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius);
     virtual ~Entity() = default;
     virtual void update(sf::Time delta) = 0;
     void draw(sf::RenderWindow &window);
     float distance(sf::Vector2f other) const;
 
     sf::Vector2f get_coordinates() const;
-    int get_radius() const;
+    float get_radius() const;
     bool collision(Entity const &other);
 
 protected:
