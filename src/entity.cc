@@ -46,3 +46,8 @@ bool Entity::collision(Entity const &other)
 
     return collided;
 }
+
+int Entity::get_radius() const
+{
+    return radius;
+}

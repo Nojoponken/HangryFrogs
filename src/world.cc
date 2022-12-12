@@ -66,7 +66,7 @@ World::World()
 }
 World::~World()
 {
-    for (auto entity : objects)
+    for (auto entity : entities)
     {
         delete entity;
     }
@@ -74,7 +74,7 @@ World::~World()
 
 void World::draw_objects(sf::RenderWindow &window)
 {
-    for (Entity *o : objects)
+    for (Entity *o : entities)
     {
         o->draw(window);
     }
@@ -85,9 +85,9 @@ void World::draw_bar(sf::RenderWindow &window)
 }
 void World::update_objects(sf::Time delta)
 {
-    sort(objects.begin(), objects.end(), [](Entity *a, Entity *b)
+    sort(entities.begin(), entities.end(), [](Entity *a, Entity *b)
          { return a->get_coordinates().y < b->get_coordinates().y; });
-    for (Entity *o : objects)
+    for (Entity *o : entities)
     {
         o->update(delta);
     }
@@ -95,7 +95,7 @@ void World::update_objects(sf::Time delta)
 
 void World::spawn_turret(sf::Vector2f position)
 {
-    objects.push_back(
+    entities.push_back(
         new Pepe{textures[0], position});
 }
 
@@ -103,18 +103,23 @@ void World::place_turret(sf::RenderWindow &window)
 {
 
     sf::Vector2f mousepos{window.mapPixelToCoords(sf::Mouse::getPosition(window))};
+    bool coll{};
+
     if (!collision(mousepos, 35))
     {
         if (turret_name == "Pepe")
         {
-            objects.push_back(new Pepe{textures[0], mousepos});
+
+            entities.push_back(new Pepe{textures[0], mousepos});
         }
         else if (turret_name == "Frost")
         {
-            objects.push_back(new Pepe{textures[5], mousepos});
+
+            entities.push_back(new Pepe{textures[5], mousepos});
         }
-        turret_name = "";
     }
+
+    turret_name = "";
 }
 std::string &World::get_turret_name()
 {
@@ -122,7 +127,7 @@ std::string &World::get_turret_name()
 }
 void World::spawn_enemy()
 {
-    objects.push_back(
+    entities.push_back(
         new Enemy{textures[1], {1024, 317}, 32, 1, path});
 }
 
@@ -138,7 +143,7 @@ User_Interface &World::get_user_interface()
 
 std::vector<Entity *> &World::get_objects()
 {
-    return objects;
+    return entities;
 }
 
 float distance(sf::Vector2f a, sf::Vector2f b)

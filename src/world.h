@@ -20,7 +20,7 @@ class World
 private:
     int health;
     int resource;
-    std::vector<Entity *> objects;
+    std::vector<Entity *> entities;
     int wave;
     std::vector<sf::Texture> textures;
     std::vector<sf::Vector2f> path;
@@ -89,7 +89,7 @@ public:
      */
     std::vector<Entity *> &get_objects();
 
-    bool collision(sf::Vector2f entity_coord, int entity_rad);
+        bool collision(sf::Vector2f entity_coord, int entity_rad);
 };
 
 #endif

@@ -14,6 +14,13 @@ private:
     sf::Sprite sprite;
 
 public:
+    /**
+     * @brief Construct a new Entity object
+     *
+     * @param texture
+     * @param coordinates
+     * @param radius
+     */
     Entity(sf::Texture &texture, sf::Vector2f coordinates, int radius);
     virtual ~Entity() = default;
     virtual void update(sf::Time delta) = 0;
