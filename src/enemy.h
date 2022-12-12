@@ -17,6 +17,7 @@ public:
     virtual void update(sf::Time delta) override;
     virtual void take_damage();
     int get_health() const;
+    float get_distance_left();
 };
 
 #endif

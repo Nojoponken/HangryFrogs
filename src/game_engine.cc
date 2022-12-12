@@ -14,28 +14,11 @@ void Game_Engine::run()
     backg.loadFromFile("../assets/bg.png");
     sf::Sprite background{backg};
 
-    /*    sf::Texture btn1{};
-       sf::Texture btn2{};
-       sf::Texture actbar{};
-       btn1.loadFromFile("../pepe.png");
-       btn2.loadFromFile("../frost.png");
-       actbar.loadFromFile("../bar.png");
-       Actionbar actionbar{actbar, {0, 758}};
-       actionbar.add_button(btn1, );
-       actionbar.add_button(btn2); */
-
-    /*     sf::Texture turr{};
-        turr.loadFromFile("../pepeheadsprite.png");
-        sf::Sprite turret{turr};
-        sf::IntRect rectTurret{0, 0, 256, 256};
-        turret.setTextureRect(rectTurret);
-        turret.setPosition(50, 50); */
     World world{};
-    world.spawn_turret({777, 200});
-    world.spawn_turret({630, 470});
-    world.spawn_turret({477, 177});
     sf::Clock clock;
+
     bool place_turret{false};
+
     sf::RenderWindow window{sf::VideoMode(1024, 858), "Hangry Frogs!"};
 
     while (window.isOpen())
