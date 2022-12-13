@@ -19,7 +19,7 @@ void Game_Engine::run()
 
     bool place_turret{false};
 
-    sf::RenderWindow window{sf::VideoMode(1024, 858), "Hangry Frogs!"};
+    sf::RenderWindow window{sf::VideoMode(1024, 896), "Hangry Frogs!"};
 
     while (window.isOpen())
     {
@@ -44,7 +44,7 @@ void Game_Engine::run()
 
         update(clock, world);
 
-        window.clear();
+        window.clear(sf::Color(130, 230, 150));
         window.draw(background);
 
         world.draw_objects(window);
