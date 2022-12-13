@@ -34,6 +34,8 @@ set(SOURCE_FILES
   src/user_interface.cc
   src/button.h
   src/button.cc
+  src/projectile.h
+  src/projectile.cc
   )
 
 add_compile_options("-g")
