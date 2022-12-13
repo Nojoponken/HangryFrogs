@@ -5,7 +5,7 @@ Turret::Turret(sf::Texture &texture, sf::Vector2f coordinates, int radius, int a
 {
 }
 
-void Turret::update(sf::Time delta)
+/* void Turret::update(sf::Time delta)
 {
 
     float current_angle{6.24f * delta.asSeconds()};
@@ -18,7 +18,7 @@ void Turret::update(sf::Time delta)
                       direction.y * std::cos(current_angle);
 
     direction = new_direction;
-}
+} */
 
 void Turret::set_position(sf::Vector2f coord)
 {

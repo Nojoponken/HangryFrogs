@@ -43,6 +43,6 @@ void Pepe::attack(sf::Time delta)
 
 void Pepe::update(sf::Time delta)
 {
-    // Turret::update(delta);
+
     attack(delta);
 }

@@ -28,6 +28,8 @@ set(SOURCE_FILES
   src/enemy.cc
   src/pepe.h
   src/pepe.cc
+  src/frost_pepe.h
+  src/frost_pepe.cc
   src/user_interface.h
   src/user_interface.cc
   src/button.h

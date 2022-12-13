@@ -1,7 +1,9 @@
 #include "enemy.h"
 
 Enemy::Enemy(sf::Texture &texture, sf::Vector2f coordinates, float radius, int health, std::vector<sf::Vector2f> const &path)
-    : Entity(texture, coordinates, radius), health{health}, checkpoint{0}, path{path}
+    : Entity(texture, coordinates, radius),
+      health{health}, checkpoint{0}, path{path},
+      speed{50}, slow{false}
 {
 }
 
@@ -25,9 +27,16 @@ void Enemy::update(sf::Time delta)
     }
     else
     {
-
-        coordinates.x += (dx / distance) * delta.asSeconds() * 50;
-        coordinates.y += (dy / distance) * delta.asSeconds() * 50;
+        if (slow)
+        {
+            speed = 25;
+        }
+        else
+        {
+            speed = 50;
+        }
+        coordinates.x += (dx / distance) * delta.asSeconds() * speed;
+        coordinates.y += (dy / distance) * delta.asSeconds() * speed;
 
         direction = {dx, dy};
     }
@@ -64,4 +73,9 @@ float Enemy::get_distance_left()
     total += distance(path.at(checkpoint));
 
     return total;
+}
+
+void Enemy::set_slow(bool slower)
+{
+    slow = slower;
 }

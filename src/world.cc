@@ -158,7 +158,7 @@ void World::place_turret(sf::RenderWindow &window)
 
             if (!pepe.collision_turrets(pepe.get_radius() - 45, entities))
             {
-                entities.push_back(new Pepe{textures[5], mousepos, entities});
+                entities.push_back(new Frost_Pepe{textures[5], mousepos, entities});
                 placed = true;
             }
 
