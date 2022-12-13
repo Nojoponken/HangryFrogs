@@ -12,7 +12,7 @@ World::World()
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
     textures[0].loadFromFile("../assets/pepeheadsprite.png");
-    textures[1].loadFromFile("../assets/flysprite.png");
+    textures[1].loadFromFile("../assets/fly.png");
     textures[2].loadFromFile("../assets/pepe.png");
     textures[3].loadFromFile("../assets/frost.png");
     textures[4].loadFromFile("../assets/bar.png");
