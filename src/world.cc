@@ -68,11 +68,6 @@ World::World()
     user_interface.add_button(textures[6], "Next");
     user_interface.add_button(textures[2], "Pepe");
     user_interface.add_button(textures[3], "Frost");
-
-    for (int i = 0; i < 17; ++i)
-    {
-        current_wave.push_back(new Enemy{textures[1], path.at(0), 32, 1, path});
-    }
 }
 World::~World()
 {
@@ -108,16 +103,33 @@ void World::update_objects(sf::Time delta)
             turret_name = "";
     }
     else if (turret_name == "Next")
-    {
-        for (int i = 0; i < 17; ++i)
-        {
-            current_wave.push_back(new Enemy{textures[1], path.at(0), 32, 1, path});
-        }
+    { /*
+         for (int i = 0; i < 3; ++i)
+         {
+             current_wave.push_back(new McFly{textures[0], path.at(0),
+                                              path, entities, textures[1]});
+
+             for (int j = 0; j < 5; ++j)
+             {*/
+        current_wave.push_back(new Fly{textures[1], path.at(0),
+                                       0, path});
+        /* }
+     }*/
         turret_name = "";
     }
 
     sort(entities.begin(), entities.end(), [](Entity *a, Entity *b)
          { return a->get_coordinates().y < b->get_coordinates().y; });
+
+    for (Entity *entity : entities)
+    {
+        Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+        if (enemy)
+        {
+            enemy->set_slow(false);
+        }
+    }
+
     for (Entity *o : entities)
     {
         o->update(delta);
@@ -183,11 +195,11 @@ std::string &World::get_turret_name()
     return turret_name;
 }
 
-void World::spawn_enemy()
+/* void World::spawn_enemy()
 {
     entities.push_back(
         new Enemy{textures[1], path[0], 32, 1, path});
-}
+} */
 
 sf::Vector2f World::get_checkpoint(int index) const
 {

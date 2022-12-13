@@ -9,8 +9,10 @@
 #include "turret.h"
 #include "pepe.h"
 #include "frost_pepe.h"
-#include "enemy.h"
 #include "user_interface.h"
+#include "enemy.h"
+#include "fly.h"
+#include "mcfly.h"
 
 /**
  * @brief A class to represent the game

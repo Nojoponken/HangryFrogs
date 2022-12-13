@@ -36,6 +36,10 @@ set(SOURCE_FILES
   src/button.cc
   src/projectile.h
   src/projectile.cc
+  src/fly.h 
+  src/fly.cc
+  src/mcfly.h
+  src/mcfly.cc
   )
 
 add_compile_options("-g")

@@ -29,7 +29,7 @@ public:
 
     sf::Vector2f get_coordinates() const;
     float get_radius() const;
-    virtual bool collision(int const rad, Entity const &other);
+    virtual bool collision(float const rad, Entity const &other);
 
 protected:
     sf::Vector2f direction;

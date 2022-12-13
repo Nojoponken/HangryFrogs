@@ -39,7 +39,7 @@ float Entity::distance(sf::Vector2f other) const
     float y{coordinates.y - other.y};
     return std::sqrt(x * x + y * y);
 }
-bool Entity::collision(int const rad, Entity const &other)
+bool Entity::collision(float const rad, Entity const &other)
 {
     bool collided{(distance(other.get_coordinates()) <
                    (rad + other.get_radius()))};
