@@ -9,6 +9,8 @@ class Enemy : public Entity
 private:
     int health;
     int checkpoint;
+    int speed;
+    bool slow;
     std::vector<sf::Vector2f> const &path;
 
 public:
@@ -18,6 +20,7 @@ public:
     virtual void take_damage();
     int get_health() const;
     float get_distance_left();
+    void set_slow(bool slower);
 };
 
 #endif

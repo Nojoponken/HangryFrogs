@@ -65,9 +65,9 @@ World::World()
 
     user_interface.set_coord({0, 768});
     user_interface.set_barsprite(textures[4]);
+    user_interface.add_button(textures[6], "Next");
     user_interface.add_button(textures[2], "Pepe");
     user_interface.add_button(textures[3], "Frost");
-    user_interface.add_button(textures[6], "Next");
 
     for (int i = 0; i < 17; ++i)
     {
@@ -138,12 +138,6 @@ void World::update_objects(sf::Time delta)
                    entities.end());
 }
 
-void World::spawn_turret(sf::Vector2f position)
-{
-    entities.push_back(
-        new Pepe{textures[0], position, entities});
-}
-
 void World::place_turret(sf::RenderWindow &window)
 {
 
@@ -154,11 +148,11 @@ void World::place_turret(sf::RenderWindow &window)
         bool placed{false};
         if (turret_name == "Pepe")
         {
-            Pepe pepe{textures[0], mousepos, entities};
+            Pepe pepe{textures[0], mousepos, entities, textures[0]};
 
             if (!pepe.collision_turrets(pepe.get_radius() - 45, entities))
             {
-                entities.push_back(new Pepe{textures[0], mousepos, entities});
+                entities.push_back(new Pepe{textures[0], mousepos, entities, textures[0]});
                 placed = true;
             }
         }
@@ -167,11 +161,11 @@ void World::place_turret(sf::RenderWindow &window)
         else if (turret_name == "Frost")
         {
 
-            Pepe pepe{textures[5], mousepos, entities};
+            Frost_Pepe frost_pepe{textures[5], mousepos, entities};
 
-            if (!pepe.collision_turrets(pepe.get_radius() - 45, entities))
+            if (!frost_pepe.collision_turrets(frost_pepe.get_radius() - 45, entities))
             {
-                entities.push_back(new Pepe{textures[5], mousepos, entities});
+                entities.push_back(new Frost_Pepe{textures[5], mousepos, entities});
                 placed = true;
             }
 

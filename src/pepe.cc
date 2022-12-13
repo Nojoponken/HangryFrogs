@@ -1,7 +1,11 @@
 #include "pepe.h"
 
-Pepe::Pepe(sf::Texture &texture, sf::Vector2f position, std::vector<Entity *> &entities)
-    : Turret(texture, position, 64, 128, entities), cooldown{0}
+Pepe::Pepe(sf::Texture &texture, sf::Vector2f position,
+           std::vector<Entity *> &entities,
+           sf::Texture &projectile_texture)
+    : Turret(texture, position, 64, 128, entities),
+      cooldown{0},
+      projectile_texture{projectile_texture}
 {
 }
 
@@ -29,7 +33,17 @@ void Pepe::attack(sf::Time delta)
         direction = enemies.at(0)->get_coordinates() - get_coordinates();
         if (cooldown <= 0)
         {
-            enemies.at(0)->take_damage();
+
+            float length{std::sqrt(direction.x * direction.x + direction.y * direction.y)};
+
+            direction.x /= length * 10;
+            direction.y /= length * 10;
+
+            entities.push_back(new Projectile{
+                projectile_texture,
+                coordinates,
+                16, direction});
+            /* enemies.at(0)->take_damage(); */
 
             cooldown = 5;
         }
@@ -43,6 +57,6 @@ void Pepe::attack(sf::Time delta)
 
 void Pepe::update(sf::Time delta)
 {
-    // Turret::update(delta);
+
     attack(delta);
 }

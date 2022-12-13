@@ -8,6 +8,7 @@
 #include "entity.h"
 #include "turret.h"
 #include "pepe.h"
+#include "frost_pepe.h"
 #include "enemy.h"
 #include "user_interface.h"
 
