@@ -88,18 +88,48 @@ void World::update_objects(sf::Time delta)
     }
     else if (turret_name == "Next")
     {
-        for (int i = 0; i < 17; ++i)
+        for (int i = 0; i < 3; ++i)
         {
-            current_wave.push_back(new Enemy{textures[1], path.at(0), 32, 1, path});
+            current_wave.push_back(new McFly{textures[1], path.at(0),
+                                             path, entities, textures[1]});
+
+            for (int j = 0; j < 5; ++j)
+            {
+                current_wave.push_back(new Fly{textures[1], path.at(0),
+                                               0, path});
+            }
         }
         turret_name = "";
     }
 
     sort(entities.begin(), entities.end(), [](Entity *a, Entity *b)
          { return a->get_coordinates().y < b->get_coordinates().y; });
-    for (Entity *o : entities)
+
+    for (Entity *entity : entities)
     {
-        o->update(delta);
+        Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+        if (enemy)
+        {
+            enemy->set_slow(false);
+        }
+    }
+
+    for (Entity *entity : entities)
+    {
+        Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+        if (!enemy)
+        {
+            entity->update(delta);
+        }
+    }
+
+    for (Entity *entity : entities)
+    {
+        Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+        if (enemy)
+        {
+            enemy->update(delta);
+        }
     }
 
     entities.erase(remove_if(entities.begin(), entities.end(), [](Entity *entity)
@@ -176,11 +206,11 @@ std::string &World::get_turret_name()
     return turret_name;
 }
 
-void World::spawn_enemy()
+/* void World::spawn_enemy()
 {
     entities.push_back(
         new Enemy{textures[1], path[0], 32, 1, path});
-}
+} */
 
 sf::Vector2f World::get_checkpoint(int index) const
 {

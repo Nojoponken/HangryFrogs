@@ -18,10 +18,6 @@ void Frost_Pepe::attack(sf::Time delta)
             {
                 enemy->set_slow(true);
             }
-            else
-            {
-                enemy->set_slow(false);
-            }
         }
     }
 }
