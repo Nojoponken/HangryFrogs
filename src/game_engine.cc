@@ -10,9 +10,9 @@ Game_Engine::~Game_Engine()
 
 void Game_Engine::run()
 {
-    sf::Texture backg{};
-    backg.loadFromFile("../assets/bg.png");
-    sf::Sprite background{backg};
+    /*  sf::Texture backg{};
+     backg.loadFromFile("../assets/bg.png");
+     sf::Sprite background{backg}; */
 
     World world{};
     sf::Clock clock;
@@ -45,8 +45,7 @@ void Game_Engine::run()
         update(clock, world);
 
         window.clear(sf::Color(130, 230, 150));
-        window.draw(background);
-
+        world.draw_background(window);
         world.draw_objects(window);
         world.draw_bar(window);
         window.display();

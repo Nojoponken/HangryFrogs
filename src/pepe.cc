@@ -42,8 +42,7 @@ void Pepe::attack(sf::Time delta)
             entities.push_back(new Projectile{
                 projectile_texture,
                 coordinates,
-                16, direction});
-            /* enemies.at(0)->take_damage(); */
+                16, direction, entities});
 
             cooldown = 5;
         }
