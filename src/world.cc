@@ -103,18 +103,18 @@ void World::update_objects(sf::Time delta)
             turret_name = "";
     }
     else if (turret_name == "Next")
-    { /*
-         for (int i = 0; i < 3; ++i)
-         {
-             current_wave.push_back(new McFly{textures[0], path.at(0),
-                                              path, entities, textures[1]});
+    {
+        for (int i = 0; i < 3; ++i)
+        {
+            current_wave.push_back(new McFly{textures[1], path.at(0),
+                                             path, entities, textures[1]});
 
-             for (int j = 0; j < 5; ++j)
-             {*/
-        current_wave.push_back(new Fly{textures[1], path.at(0),
-                                       0, path});
-        /* }
-     }*/
+            for (int j = 0; j < 5; ++j)
+            {
+                current_wave.push_back(new Fly{textures[1], path.at(0),
+                                               0, path});
+            }
+        }
         turret_name = "";
     }
 
@@ -130,9 +130,22 @@ void World::update_objects(sf::Time delta)
         }
     }
 
-    for (Entity *o : entities)
+    for (Entity *entity : entities)
     {
-        o->update(delta);
+        Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+        if (!enemy)
+        {
+            entity->update(delta);
+        }
+    }
+
+    for (Entity *entity : entities)
+    {
+        Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+        if (enemy)
+        {
+            enemy->update(delta);
+        }
     }
 
     entities.erase(remove_if(entities.begin(), entities.end(), [](Entity *entity)
