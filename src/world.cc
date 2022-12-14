@@ -1,10 +1,11 @@
 #include "world.h"
 
 World::World()
-    : entities{}, user_interface{}, turret_name{},
-      ifs{}, path{}, path_radius{10},
-      wave{0}, current_wave{}, spawn_clock{0}
+    : entities{}, last_button_pressed{},
+      path{}, path_radius{10},
+      current_wave{}, spawn_clock{0}
 {
+    textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
@@ -21,6 +22,7 @@ World::World()
     textures[5].loadFromFile("../assets/frostheadsprite.png");
     textures[6].loadFromFile("../assets/wavebutton.png");
     textures[7].loadFromFile("../assets/bg.png");
+    textures[8].loadFromFile("../assets/fireheadsprite.png");
 
     std::ifstream ifs{"../src/path.txt"};
 
@@ -37,8 +39,7 @@ World::World()
 
         path.push_back(sf::Vector2f{x, y});
     }
-    user_interface.set_coord({0, 768});
-    user_interface.set_barsprite(textures[4]);
+    user_interface = User_Interface{textures[4], {0, 748}};
     user_interface.add_button(textures[6], "Next");
     user_interface.add_button(textures[2], "Pepe");
     user_interface.add_button(textures[3], "Frost");
@@ -60,18 +61,18 @@ void World::draw_background(sf::RenderWindow &window)
 
     window.draw(sf::Sprite{textures[7]});
 }
-void World::draw_objects(sf::RenderWindow &window)
+void World::draw_entities(sf::RenderWindow &window)
 {
-    for (Entity *o : entities)
+    for (Entity *entity : entities)
     {
-        o->draw(window);
+        entity->draw(window);
     }
 }
 void World::draw_bar(sf::RenderWindow &window)
 {
     user_interface.draw_bar(window);
 }
-void World::update_objects(sf::Time delta)
+void World::update_entities(sf::Time delta)
 {
     if (!current_wave.empty())
     {
@@ -83,10 +84,10 @@ void World::update_objects(sf::Time delta)
 
             --spawn_clock;
         }
-        if (turret_name == "Next")
-            turret_name = "";
+        if (last_button_pressed == "Next")
+            last_button_pressed = "";
     }
-    else if (turret_name == "Next")
+    else if (last_button_pressed == "Next")
     {
         for (int i = 0; i < 3; ++i)
         {
@@ -99,7 +100,7 @@ void World::update_objects(sf::Time delta)
                                                0, path});
             }
         }
-        turret_name = "";
+        last_button_pressed = "";
     }
 
     sort(entities.begin(), entities.end(), [](Entity *a, Entity *b)
@@ -156,7 +157,7 @@ void World::update_objects(sf::Time delta)
                     return false;
                   }
 
-                if(!projectile->get_projectile_status())
+                if(!projectile->get_projectile_hit())
                   {
                     return false;
                   }
@@ -172,23 +173,23 @@ void World::place_turret(sf::RenderWindow &window)
     if (!collision(mousepos, 35))
     {
         bool placed{false};
-        if (turret_name == "Pepe")
+        if (last_button_pressed == "Pepe")
         {
-            Pepe pepe{textures[0], mousepos, entities, textures[0]};
+            Pepe pepe{textures[0], mousepos, entities, textures[8]};
 
-            if (!pepe.collision_turrets(pepe.get_radius() - 45, entities))
+            if (!pepe.collision_turrets(pepe.get_radius() - 45))
             {
-                entities.push_back(new Pepe{textures[0], mousepos, entities, textures[0]});
+                entities.push_back(new Pepe{textures[0], mousepos, entities, textures[8]});
                 placed = true;
             }
         }
 
-        else if (turret_name == "Frost")
+        else if (last_button_pressed == "Frost")
         {
 
             Frost_Pepe frost_pepe{textures[5], mousepos, entities};
 
-            if (!frost_pepe.collision_turrets(frost_pepe.get_radius() - 45, entities))
+            if (!frost_pepe.collision_turrets(frost_pepe.get_radius() - 45))
             {
                 entities.push_back(new Frost_Pepe{textures[5], mousepos, entities});
                 placed = true;
@@ -196,21 +197,15 @@ void World::place_turret(sf::RenderWindow &window)
         }
         if (placed)
         {
-            turret_name = "";
+            last_button_pressed = "";
         }
     }
 }
 
-std::string &World::get_turret_name()
+std::string &World::get_button_reference()
 {
-    return turret_name;
+    return last_button_pressed;
 }
-
-/* void World::spawn_enemy()
-{
-    entities.push_back(
-        new Enemy{textures[1], path[0], 32, 1, path});
-} */
 
 sf::Vector2f World::get_checkpoint(int index) const
 {
@@ -220,11 +215,6 @@ sf::Vector2f World::get_checkpoint(int index) const
 User_Interface &World::get_user_interface()
 {
     return user_interface;
-}
-
-std::vector<Entity *> &World::get_objects()
-{
-    return entities;
 }
 
 float distance(sf::Vector2f a, sf::Vector2f b)

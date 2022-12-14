@@ -10,16 +10,13 @@ Game_Engine::~Game_Engine()
 
 void Game_Engine::run()
 {
-    /*  sf::Texture backg{};
-     backg.loadFromFile("../assets/bg.png");
-     sf::Sprite background{backg}; */
 
     World world{};
     sf::Clock clock;
 
     bool place_turret{false};
 
-    sf::RenderWindow window{sf::VideoMode(1024, 896), "Hangry Frogs!"};
+    sf::RenderWindow window{sf::VideoMode(1024, 876), "Hangry Frogs!"};
 
     while (window.isOpen())
     {
@@ -34,7 +31,7 @@ void Game_Engine::run()
 
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
-                if (!world.get_user_interface().on_bar(window, world.get_turret_name()))
+                if (!world.get_user_interface().on_bar(window, world.get_button_reference()))
                 {
 
                     world.place_turret(window);
@@ -46,7 +43,7 @@ void Game_Engine::run()
 
         window.clear(sf::Color(130, 230, 150));
         world.draw_background(window);
-        world.draw_objects(window);
+        world.draw_entities(window);
         world.draw_bar(window);
         window.display();
     }
@@ -55,5 +52,5 @@ void Game_Engine::run()
 void Game_Engine::update(sf::Clock &clock, World &world)
 {
     sf::Time delta = clock.restart();
-    world.update_objects(delta);
+    world.update_entities(delta);
 }

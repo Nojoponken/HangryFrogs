@@ -23,13 +23,15 @@ public:
      */
     Entity(sf::Texture &texture, sf::Vector2f coordinates, float radius);
     virtual ~Entity() = default;
+
     virtual void update(sf::Time delta) = 0;
     void draw(sf::RenderWindow &window);
+
+    virtual bool collision(float const rad, Entity const &other);
     float distance(sf::Vector2f other) const;
 
     sf::Vector2f get_coordinates() const;
     float get_radius() const;
-    virtual bool collision(float const rad, Entity const &other);
 
 protected:
     sf::Vector2f direction;

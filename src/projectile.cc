@@ -5,7 +5,7 @@ Projectile::Projectile(sf::Texture &texture, sf::Vector2f coordinates,
     : Entity(texture, coordinates, radius), entities{entities}
 {
     direction = velocity;
-    projectile_status = false;
+    projectile_hit = false;
 }
 
 void Projectile::update(sf::Time delta)
@@ -25,13 +25,13 @@ void Projectile::hit()
             if (collision(get_radius(), *enemy))
             {
                 enemy->take_damage();
-                projectile_status = true;
+                projectile_hit = true;
             }
         }
     }
 }
 
-bool Projectile::get_projectile_status() const
+bool Projectile::get_projectile_hit() const
 {
-    return projectile_status;
+    return projectile_hit;
 }

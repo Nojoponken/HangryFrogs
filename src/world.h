@@ -26,13 +26,12 @@ class World
 private:
     std::vector<Entity *> entities;
     std::vector<Entity *> current_wave;
-    int wave;
     float spawn_clock;
     std::vector<sf::Texture> textures;
     std::vector<sf::Vector2f> path;
     int path_radius;
     User_Interface user_interface;
-    std::string turret_name;
+    std::string last_button_pressed;
 
 public:
     World();
@@ -43,7 +42,7 @@ public:
      *
      * @param window an sf::RenderWindow argument.
      */
-    void draw_objects(sf::RenderWindow &window);
+    void draw_entities(sf::RenderWindow &window);
     /**
      * @brief Function to display the actionbar in the game that the user interacts with to build turrets.
      *
@@ -55,13 +54,7 @@ public:
      *
      * @param delta - an sf::Time argument.
      */
-    void update_objects(sf::Time delta);
-    /**
-     * @brief Function to store a new Turret class object into a specific data container.
-     *
-     * @param position an sf::Vector2f argument.
-     */
-    void spawn_turret(sf::Vector2f position);
+    void update_entities(sf::Time delta);
     /**
      * @brief Function to store a new Turret class object into a specific data container.
      *
@@ -69,12 +62,7 @@ public:
      */
     void place_turret(sf::RenderWindow &window);
 
-    std::string &get_turret_name();
-    /**
-     * @brief Function to store a new Enemy class object in a specific data container.
-     *
-     */
-    void spawn_enemy();
+    std::string &get_button_reference();
     /**
      * @brief Function that returns a certain coordinate pair on index in a specific data container wich represent the
      *        path that is the displayed in the game.
@@ -93,7 +81,7 @@ public:
      *
      * @return std::vector<Entity *>& a vector containing Entity pointers.
      */
-    std::vector<Entity *> &get_objects();
+    // std::vector<Entity *> &get_entities();
 
     bool collision(sf::Vector2f entity_coord, int entity_rad);
 };

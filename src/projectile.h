@@ -8,7 +8,7 @@ class Projectile : public Entity
 {
 private:
     std::vector<Entity *> &entities;
-    bool projectile_status;
+    bool projectile_hit;
 
 public:
     Projectile(sf::Texture &texture, sf::Vector2f coordinates,
@@ -16,7 +16,7 @@ public:
                std::vector<Entity *> &entities);
     void update(sf::Time delta) override;
     void hit();
-    bool get_projectile_status() const;
+    bool get_projectile_hit() const;
 };
 
 #endif

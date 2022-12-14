@@ -12,14 +12,14 @@ class Turret : public Entity
 {
 private:
 public:
-    Turret(sf::Texture &texture, sf::Vector2f coordinates, int radius, int attack_radius, std::vector<Entity *> &entities);
+    Turret(sf::Texture &texture, sf::Vector2f coordinates, float radius, float attack_radius, std::vector<Entity *> &entities);
     virtual ~Turret() = default;
     virtual void update(sf::Time delta) override = 0;
+    virtual bool collision_turrets(int const rad); // Kanske flytta till collision i world
     void set_position(sf::Vector2f coord);
-    virtual bool collision_turrets(int const rad, std::vector<Entity *> &entities);
 
 protected:
-    int attack_radius;
+    float attack_radius;
     virtual void attack(sf::Time delta) = 0;
     std::vector<Entity *> &entities;
 };

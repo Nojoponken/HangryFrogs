@@ -9,7 +9,6 @@ class Pepe : public Turret
 {
 private:
     void attack(sf::Time delta) override;
-    std::vector<Enemy *> enemies{};
     float cooldown;
     sf::Texture &projectile_texture;
 
