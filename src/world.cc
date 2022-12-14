@@ -1,10 +1,11 @@
 #include "world.h"
 
 World::World()
-    : user_interface{}, turret_name{},
-      path{}, path_radius{10},
+    : entities{}, user_interface{}, turret_name{},
+      ifs{}, path{}, path_radius{10},
       wave{0}, current_wave{}, spawn_clock{0}
 {
+    textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
@@ -19,69 +20,46 @@ World::World()
     textures[4].loadFromFile("../assets/bar.png");
     textures[5].loadFromFile("../assets/frostheadsprite.png");
     textures[6].loadFromFile("../assets/wavebutton.png");
-    path = {
-        {1080, 325},
-        {939, 295},
-        {902, 267},
-        {892, 242},
-        {892, 162},
-        {880, 123},
-        {855, 101},
-        {808, 90},
-        {767, 90},
-        {728, 108},
-        {704, 137},
-        {660, 212},
-        {597, 220},
-        {569, 202},
-        {561, 104},
-        {537, 73},
-        {514, 68},
-        {453, 68},
-        {416, 78},
-        {407, 110},
-        {393, 182},
-        {351, 247},
-        {167, 273},
-        {109, 300},
-        {82, 338},
-        {86, 377},
-        {121, 397},
-        {616, 429},
-        {662, 432},
-        {700, 462},
-        {721, 508},
-        {692, 552},
-        {336, 518},
-        {142, 508},
-        {103, 537},
-        {103, 587},
-        {133, 616},
-        {361, 633},
-        {509, 655},
-        {664, 669},
-        {729, 683},
-        {774, 800}};
+    textures[7].loadFromFile("../assets/bg.png");
 
+    std::ifstream ifs{"../src/path.txt"};
+
+    while (true)
+    {
+        float x{};
+        float y{};
+
+        ifs >> x;
+        ifs >> y;
+
+        if (ifs.eof())
+            break;
+
+        path.push_back(sf::Vector2f{x, y});
+    }
     user_interface.set_coord({0, 768});
     user_interface.set_barsprite(textures[4]);
     user_interface.add_button(textures[6], "Next");
     user_interface.add_button(textures[2], "Pepe");
     user_interface.add_button(textures[3], "Frost");
-
-    for (int i = 0; i < 17; ++i)
-    {
-        current_wave.push_back(new Enemy{textures[1], path.at(0), 32, 1, path});
-    }
 }
 World::~World()
 {
-    for (auto entity : entities)
+
+    for (Entity *entity : entities)
+    {
+        delete entity;
+    }
+    for (Entity *entity : current_wave)
     {
         delete entity;
     }
 }
+void World::draw_background(sf::RenderWindow &window)
+{
 
+    window.draw(sf::Sprite{textures[7]});
+}
 void World::draw_objects(sf::RenderWindow &window)
 {
     for (Entity *o : entities)
@@ -102,6 +80,7 @@ void World::update_objects(sf::Time delta)
         {
             entities.push_back(current_wave.at(current_wave.size() - 1));
             current_wave.pop_back();
+
             --spawn_clock;
         }
         if (turret_name == "Next")
@@ -126,6 +105,7 @@ void World::update_objects(sf::Time delta)
     entities.erase(remove_if(entities.begin(), entities.end(), [](Entity *entity)
                              {
                   Enemy *enemy{dynamic_cast<Enemy *>(entity)};
+                 
                   if(!enemy)
                   {
                     return false;
@@ -134,7 +114,23 @@ void World::update_objects(sf::Time delta)
                   {
                     return false;
                   } 
+                  
                   return true; }),
+                   entities.end());
+
+    entities.erase(remove_if(entities.begin(), entities.end(), [](Entity *entity)
+                             {   
+                Projectile * projectile{dynamic_cast<Projectile*>(entity)};
+                if(!projectile)
+                  {
+                    return false;
+                  }
+
+                if(!projectile->get_projectile_status())
+                  {
+                    return false;
+                  }
+                  return true ; }),
                    entities.end());
 }
 
@@ -156,7 +152,6 @@ void World::place_turret(sf::RenderWindow &window)
                 placed = true;
             }
         }
-        // entities.push_back(new Pepe{textures[0], mousepos, entities});
 
         else if (turret_name == "Frost")
         {
@@ -168,8 +163,6 @@ void World::place_turret(sf::RenderWindow &window)
                 entities.push_back(new Frost_Pepe{textures[5], mousepos, entities});
                 placed = true;
             }
-
-            // entities.push_back(new Pepe{textures[5], mousepos, entities});
         }
         if (placed)
         {

@@ -3,7 +3,10 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <fstream>
 #include <algorithm>
+#include <iterator>
+#include <iostream>
 
 #include "entity.h"
 #include "turret.h"
@@ -32,12 +35,7 @@ private:
 public:
     World();
     ~World();
-    /**
-     * @brief Function to update all entities inside the class.
-     *
-     * @param delta - an sf::Time argument.
-     */
-    void update_objects(sf::Time delta);
+    void draw_background(sf::RenderWindow &window);
     /**
      * @brief Function to display all the entitites stored in a specific data container.
      *
@@ -50,6 +48,12 @@ public:
      * @param window an sf::RenderWindow argument.
      */
     void draw_bar(sf::RenderWindow &window);
+    /**
+     * @brief Function to update all entities inside the class.
+     *
+     * @param delta - an sf::Time argument.
+     */
+    void update_objects(sf::Time delta);
     /**
      * @brief Function to store a new Turret class object into a specific data container.
      *
