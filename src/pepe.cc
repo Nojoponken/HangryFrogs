@@ -1,15 +1,15 @@
 #include "pepe.h"
 
-Pepe::Pepe(sf::Texture &texture, sf::Vector2f position,
+Pepe::Pepe(sf::Texture const &texture, sf::Vector2f const &position,
            std::vector<Entity *> &entities,
-           sf::Texture &projectile_texture)
+           sf::Texture const &projectile_texture)
     : Turret(texture, position, 64, 128, entities),
       cooldown{0},
       projectile_texture{projectile_texture}
 {
 }
 
-void Pepe::attack(sf::Time delta)
+void Pepe::attack(sf::Time const &delta)
 {
     std::vector<Enemy *> enemies{};
 
@@ -54,7 +54,7 @@ void Pepe::attack(sf::Time delta)
     //
 }
 
-void Pepe::update(sf::Time delta)
+void Pepe::update(sf::Time const &delta)
 {
 
     attack(delta);

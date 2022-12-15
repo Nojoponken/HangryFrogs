@@ -1,11 +1,11 @@
 #include "mcfly.h"
 
-McFly::McFly(sf::Texture &texture, sf::Vector2f coordinates, std::vector<sf::Vector2f> const &path, std::vector<Entity *> &entities, sf::Texture &spawned_texture)
+McFly::McFly(sf::Texture const &texture, sf::Vector2f coordinates, std::vector<sf::Vector2f> const &path, std::vector<Entity *> &entities, sf::Texture &spawned_texture)
     : Enemy(texture, coordinates, 64, 5, 0, path, 15), entities{entities}, spawned_texture{spawned_texture}
 {
 }
 
-void McFly::update(sf::Time delta)
+void McFly::update(sf::Time const &delta)
 {
     Enemy::point_to_path(delta);
     cooldown -= delta.asSeconds();

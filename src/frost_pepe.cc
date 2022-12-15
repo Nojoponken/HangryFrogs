@@ -1,11 +1,11 @@
 #include "frost_pepe.h"
 
-Frost_Pepe::Frost_Pepe(sf::Texture &texture, sf::Vector2f position, std::vector<Entity *> &entities)
+Frost_Pepe::Frost_Pepe(sf::Texture const &texture, sf::Vector2f const &position, std::vector<Entity *> &entities)
     : Turret(texture, position, 64, 128, entities)
 {
 }
 
-void Frost_Pepe::attack(sf::Time delta)
+void Frost_Pepe::attack(sf::Time const &delta)
 {
     std::vector<Enemy *> enemies{};
 
@@ -22,7 +22,7 @@ void Frost_Pepe::attack(sf::Time delta)
     }
 }
 
-void Frost_Pepe::update(sf::Time delta)
+void Frost_Pepe::update(sf::Time const &delta)
 {
     float current_angle{6.24f * delta.asSeconds()};
 

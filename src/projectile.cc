@@ -1,14 +1,14 @@
 #include "projectile.h"
 
-Projectile::Projectile(sf::Texture &texture, sf::Vector2f coordinates,
-                       float radius, sf::Vector2f velocity, std::vector<Entity *> &entities)
+Projectile::Projectile(sf::Texture const &texture, sf::Vector2f const &coordinates,
+                       float const radius, sf::Vector2f const &velocity, std::vector<Entity *> &entities)
     : Entity(texture, coordinates, radius), entities{entities}
 {
     direction = velocity;
     projectile_hit = false;
 }
 
-void Projectile::update(sf::Time delta)
+void Projectile::update(sf::Time const &delta)
 {
     coordinates.x += direction.x;
     coordinates.y += direction.y;

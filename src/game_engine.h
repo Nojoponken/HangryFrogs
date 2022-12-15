@@ -13,7 +13,7 @@
 class Game_Engine
 {
 private:
-     /**
+    /**
      * @brief Function that contains all the operations in the update step of a frame.
      *
      * @param clock Clock object that is used to generate a delta in the function.

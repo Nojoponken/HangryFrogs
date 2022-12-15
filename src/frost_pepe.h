@@ -15,16 +15,16 @@ private:
      *
      * @param delta an sf::Time argument
      */
-    virtual void attack(sf::Time delta);
+    virtual void attack(sf::Time const &delta);
 
 public:
-    Frost_Pepe(sf::Texture &texture, sf::Vector2f position, std::vector<Entity *> &entities);
+    Frost_Pepe(sf::Texture const &texture, sf::Vector2f const &position, std::vector<Entity *> &entities);
     /**
      * @brief Function to update object.
      *
      * @param delta an sf::Vector2f argument.
      */
-    void update(sf::Time delta) override;
+    void update(sf::Time const &delta) override;
 };
 
 #endif

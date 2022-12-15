@@ -16,28 +16,21 @@ private:
      *
      * @param delta an sf::Time argument used to set cooldown on attack.
      */
-    void attack(sf::Time delta) override;
-    /**
-     * @brief Cooldown on attack.
-     *
-     */
-    float cooldown;
-    /**
-     * @brief Projectile texture.
-     *
-     */
-    sf::Texture &projectile_texture;
+    void attack(sf::Time const &delta) override;
+
+    float cooldown;                        /// Cooldown on attack.
+    sf::Texture const &projectile_texture; /// Texture of spawned projectile.
 
 public:
-    Pepe(sf::Texture &texture, sf::Vector2f position,
+    Pepe(sf::Texture const &texture, sf::Vector2f const &position,
          std::vector<Entity *> &entities,
-         sf::Texture &projectile_texture);
+         sf::Texture const &projectile_texture);
     /**
      * @brief Function to update object.
      *
      * @param delta an sf::Vector2f argument.
      */
-    void update(sf::Time delta) override;
+    void update(sf::Time const &delta) override;
 };
 
 #endif

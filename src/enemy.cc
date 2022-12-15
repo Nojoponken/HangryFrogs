@@ -1,13 +1,15 @@
 #include "enemy.h"
 
-Enemy::Enemy(sf::Texture &texture, sf::Vector2f coordinates, float radius, int health, int checkpoint, std::vector<sf::Vector2f> const &path, int speed)
+Enemy::Enemy(sf::Texture const &texture, sf::Vector2f const &coordinates,
+             float const radius, int const health,
+             int const checkpoint, std::vector<sf::Vector2f> const &path, int const speed)
     : Entity(texture, coordinates, radius),
       health{health}, checkpoint{checkpoint}, path{path},
       speed{speed}, slowed{false}
 {
 }
 
-void Enemy::point_to_path(sf::Time delta)
+void Enemy::point_to_path(sf::Time const &delta)
 {
     sf::Vector2f target{path.at(checkpoint)};
 
@@ -64,7 +66,7 @@ float pythagoras(sf::Vector2f a, sf::Vector2f b)
     return sqrt((x * x) + (y * y));
 }
 
-float Enemy::get_distance_left()
+float Enemy::get_distance_left() const
 {
     float total{0};
 
@@ -82,7 +84,7 @@ void Enemy::set_slow(bool slower)
     slowed = slower;
 }
 
-int Enemy::get_checkpoint()
+int Enemy::get_checkpoint() const
 {
     return checkpoint;
 }
