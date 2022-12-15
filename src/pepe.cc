@@ -36,8 +36,8 @@ void Pepe::attack(sf::Time const &delta)
 
             float length{std::sqrt(direction.x * direction.x + direction.y * direction.y)};
 
-            direction.x /= length * 10;
-            direction.y /= length * 10;
+            direction.x /= length / 100;
+            direction.y /= length / 100;
 
             entities.push_back(new Projectile{
                 projectile_texture,

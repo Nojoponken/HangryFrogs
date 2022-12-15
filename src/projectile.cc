@@ -10,8 +10,8 @@ Projectile::Projectile(sf::Texture const &texture, sf::Vector2f const &coordinat
 
 void Projectile::update(sf::Time const &delta)
 {
-    coordinates.x += direction.x;
-    coordinates.y += direction.y;
+    coordinates.x += direction.x * delta.asSeconds();
+    coordinates.y += direction.y * delta.asSeconds();
     hit();
 }
 
