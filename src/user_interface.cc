@@ -4,7 +4,7 @@ User_Interface::User_Interface()
     : bar_sprite{}, coordinates{}, buttons{}
 {
 }
-User_Interface::User_Interface(sf::Texture &texture, sf::Vector2f const &coordinates)
+User_Interface::User_Interface(sf::Texture const &texture, sf::Vector2f const &coordinates)
     : bar_sprite{}, coordinates{coordinates}, buttons{}
 {
     bar_sprite.setTexture(texture);
