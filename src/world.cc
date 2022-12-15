@@ -72,7 +72,7 @@ void World::draw_bar(sf::RenderWindow &window)
 {
     user_interface.draw_bar(window);
 }
-void World::update_entities(sf::Time delta)
+void World::update_entities(sf::Time const &delta)
 {
     if (!current_wave.empty())
     {
@@ -224,7 +224,7 @@ float distance(sf::Vector2f a, sf::Vector2f b)
     return std::sqrt(x * x + y * y);
 }
 
-bool World::collision(sf::Vector2f entity_coord, int entity_rad)
+bool World::collision(sf::Vector2f const &entity_coord, int const entity_rad)
 {
     int radius = entity_rad + path_radius;
 

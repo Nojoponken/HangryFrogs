@@ -31,7 +31,7 @@ void User_Interface::draw_bar(sf::RenderWindow &window)
     }
 }
 
-void User_Interface::add_button(sf::Texture &texture, std::string const &name)
+void User_Interface::add_button(sf::Texture const &texture, std::string const &name)
 {
     buttons.push_back(new Button{texture, name});
 }

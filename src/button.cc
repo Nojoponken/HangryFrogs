@@ -1,6 +1,6 @@
 #include "button.h"
 
-Button::Button(sf::Texture &texture, std::string const &name)
+Button::Button(sf::Texture const &texture, std::string const &name)
     : button_sprite{}, name{name}
 {
     button_sprite.setTexture(texture);
@@ -12,7 +12,7 @@ void Button::draw_button(sf::RenderWindow &window)
     window.draw(button_sprite);
 }
 
-void Button::set_position(sf::Vector2f coordinates)
+void Button::set_position(sf::Vector2f const &coordinates)
 {
     button_sprite.setPosition(coordinates.x, coordinates.y);
 }

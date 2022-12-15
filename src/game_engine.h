@@ -7,14 +7,14 @@
 #include "world.h"
 
 /**
- * @brief
+ * @brief Responsible for the game loop, updating and drawing the game.
  *
  */
 class Game_Engine
 {
 private:
     /**
-     * @brief Function that contains all the operations in the update step of a frame.
+     * @brief Contains all the operations in the update step of a frame.
      *
      * @param clock Clock object that is used to generate a delta in the function.
      * @param world World object that should be updated.
@@ -22,7 +22,7 @@ private:
     void update(sf::Clock &clock, World &world);
 
     /**
-     * @brief Function that contains all the operations in the draw step of a frame.
+     * @brief Contains all the operations in the draw step of a frame.
      *
      */
     void draw();
@@ -32,7 +32,7 @@ public:
     ~Game_Engine();
 
     /**
-     * @brief Function that runs the game loop.
+     * @brief Runs the game loop.
      *
      */
     void run();

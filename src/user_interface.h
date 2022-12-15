@@ -47,7 +47,7 @@ public:
      * @param texture an sf::Texture argument containting the buttons texture.
      * @param name a std::string argument. The name of the button.
      */
-    void add_button(sf::Texture &texture, std::string const &name);
+    void add_button(sf::Texture const &texture, std::string const &name);
     /**
      * @brief Function to deter if the user have clicked on the user interface bar.
      *

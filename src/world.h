@@ -24,18 +24,23 @@
 class World
 {
 private:
-    std::vector<Entity *> entities;
-    std::vector<Entity *> current_wave;
-    float spawn_clock;
-    std::vector<sf::Texture> textures;
-    std::vector<sf::Vector2f> path;
-    int path_radius;
-    User_Interface user_interface;
-    std::string last_button_pressed;
+    std::vector<Entity *> entities;     /// Vector containing all entities in the game.
+    std::vector<Entity *> current_wave; /// Vector containing all enemies that have yet to be spawned in the current wave.
+    float spawn_clock;                  /// Seconds since last spawn.
+    std::vector<sf::Texture> textures;  /// Vector storing all the games textures.
+    std::vector<sf::Vector2f> path;     /// Path that enemies follow.
+    int path_radius;                    /// Radius of the path that turrets may not be placed on.
+    User_Interface user_interface;      /// User interface for placing turrets and starting waves.
+    std::string last_button_pressed;    /// Return value of the last button that was pressed.
 
 public:
     World();
     ~World();
+    /**
+     * @brief Renders the background image.
+     *
+     * @param window an sf::RenderWindow argument.
+     */
     void draw_background(sf::RenderWindow &window);
     /**
      * @brief Function to display all the entitites stored in a specific data container.
@@ -54,7 +59,7 @@ public:
      *
      * @param delta - an sf::Time argument.
      */
-    void update_entities(sf::Time delta);
+    void update_entities(sf::Time const &delta);
     /**
      * @brief Function to store a new Turret class object into a specific data container.
      *
@@ -69,21 +74,23 @@ public:
      * @param index an integer argument.
      * @return sf::Vector2f The coordinate
      */
-    sf::Vector2f get_checkpoint(int index) const;
+    sf::Vector2f get_checkpoint(int constindex) const;
     /**
      * @brief Function that return the actionbar objects by reference.
      *
      * @return Actionbar& The Action bar class.
      */
     User_Interface &get_user_interface();
-    /**
-     * @brief Function that returns a vector by reference containing all the entities displayed in the game.
-     *
-     * @return std::vector<Entity *>& a vector containing Entity pointers.
-     */
-    // std::vector<Entity *> &get_entities();
 
-    bool collision(sf::Vector2f entity_coord, int entity_rad);
+    /**
+     * @brief Collision between an entity and the path.
+     *
+     * @param entity_coord Entity position.
+     * @param entity_rad Entity radius.
+     * @return true
+     * @return false
+     */
+    bool collision(sf::Vector2f const &entity_coord, int const entity_rad);
 };
 
 #endif

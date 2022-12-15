@@ -7,6 +7,10 @@
 #include <cmath>
 #include <iostream>
 
+/**
+ * @brief A basic game object, with a position, radius, direction and sprite.
+ *
+ */
 class Entity
 {
 private:
