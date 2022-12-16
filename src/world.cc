@@ -145,6 +145,7 @@ void World::update_entities(sf::Time const &delta)
                   {
                     return false;
                   } 
+                  delete entity;
                   
                   return true; }),
                    entities.end());
@@ -161,6 +162,7 @@ void World::update_entities(sf::Time const &delta)
                   {
                     return false;
                   }
+                  delete entity;
                   return true ; }),
                    entities.end());
 }
