@@ -26,6 +26,7 @@ class World
 private:
     std::vector<Entity *> entities;     /// Vector containing all entities in the game.
     std::vector<Entity *> current_wave; /// Vector containing all enemies that have yet to be spawned in the current wave.
+    int wave;                           /// Current wave number.
     float spawn_clock;                  /// Seconds since last spawn.
     std::vector<sf::Texture> textures;  /// Vector storing all the games textures.
     std::vector<sf::Vector2f> path;     /// Path that enemies follow.

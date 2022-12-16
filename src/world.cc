@@ -3,7 +3,7 @@
 World::World()
     : entities{}, last_button_pressed{},
       path{}, path_radius{10},
-      current_wave{}, spawn_clock{0}
+      current_wave{}, wave{0}, spawn_clock{0}
 {
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
@@ -89,7 +89,8 @@ void World::update_entities(sf::Time const &delta)
     }
     else if (last_button_pressed == "Next")
     {
-        for (int i = 0; i < 3; ++i)
+        ++wave;
+        for (int i = 0; i < wave; ++i)
         {
             current_wave.push_back(new McFly{textures[1], path.at(0),
                                              path, entities, textures[1]});
@@ -146,7 +147,6 @@ void World::update_entities(sf::Time const &delta)
                     return false;
                   } 
                   delete entity;
-                  
                   return true; }),
                    entities.end());
 
