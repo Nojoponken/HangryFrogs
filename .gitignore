@@ -1,0 +1,5 @@
+# Editor specific
+.vscode
+
+# Build files
+build
