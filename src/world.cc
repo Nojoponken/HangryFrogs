@@ -14,17 +14,17 @@ World::World()
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
     textures.push_back(sf::Texture{});
-    textures[0].loadFromFile("../assets/pepeheadsprite.png");
-    textures[1].loadFromFile("../assets/fly.png");
-    textures[2].loadFromFile("../assets/pepe.png");
-    textures[3].loadFromFile("../assets/frost.png");
-    textures[4].loadFromFile("../assets/bar.png");
-    textures[5].loadFromFile("../assets/frostheadsprite.png");
-    textures[6].loadFromFile("../assets/wavebutton.png");
-    textures[7].loadFromFile("../assets/bg.png");
-    textures[8].loadFromFile("../assets/fireheadsprite.png");
+    textures[0].loadFromFile("assets/pepeheadsprite.png");
+    textures[1].loadFromFile("assets/fly.png");
+    textures[2].loadFromFile("assets/pepe.png");
+    textures[3].loadFromFile("assets/frost.png");
+    textures[4].loadFromFile("assets/bar.png");
+    textures[5].loadFromFile("assets/frostheadsprite.png");
+    textures[6].loadFromFile("assets/wavebutton.png");
+    textures[7].loadFromFile("assets/bg.png");
+    textures[8].loadFromFile("assets/fireheadsprite.png");
 
-    std::ifstream ifs{"../src/path.txt"};
+    std::ifstream ifs{"src/path.txt"};
 
     while (true)
     {

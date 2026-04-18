@@ -2,7 +2,16 @@ cmake_minimum_required(VERSION 3.10)
 project(game)
 
 # Använd C++ 17.
-set(CMALE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17)
+
+include(FetchContent)
+FetchContent_Declare(SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 2.5.1
+    GIT_SHALLOW ON
+    EXCLUDE_FROM_ALL
+    SYSTEM)
+FetchContent_MakeAvailable(SFML)
 
 # Välj vilka moduler i SFML som ska användas.
 set(SFML_MODULES network graphics window system )
@@ -16,29 +25,17 @@ endforeach(i)
 # Ange källfiler, lägg till de filer som ni behöver!
 set(SOURCE_FILES
   src/main.cc
-  src/game_engine.h
   src/game_engine.cc
-  src/entity.h
   src/entity.cc
-  src/world.h
   src/world.cc
-  src/turret.h
   src/turret.cc
-  src/enemy.h
   src/enemy.cc
-  src/pepe.h
   src/pepe.cc
-  src/frost_pepe.h
   src/frost_pepe.cc
-  src/user_interface.h
   src/user_interface.cc
-  src/button.h
   src/button.cc
-  src/projectile.h
   src/projectile.cc
-  src/fly.h 
   src/fly.cc
-  src/mcfly.h
   src/mcfly.cc
   )
 
